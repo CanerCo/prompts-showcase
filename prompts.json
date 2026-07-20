@@ -1,0 +1,54 @@
+[
+  {
+    "id": "requirements-extractor",
+    "title": "Requirements Extractor",
+    "description": "Turns an unstructured stakeholder request into explicit requirements, assumptions, and open questions.",
+    "category": "Planning",
+    "model": "GPT-5",
+    "version": "v1.3",
+    "date": "2026-07-01",
+    "featured": true,
+    "tags": ["requirements", "analysis", "stakeholders"],
+    "prompt": "You are a senior product analyst.\n\nAnalyze the project request below and return:\n1. Goals\n2. Functional requirements\n3. Non-functional requirements\n4. Constraints\n5. Assumptions\n6. Open questions\n7. Acceptance criteria\n\nDo not invent missing facts. Clearly label uncertainty.\n\nPROJECT REQUEST:\n{{project_request}}",
+    "lesson": "A fixed output structure made reviews faster and reduced hidden assumptions."
+  },
+  {
+    "id": "implementation-planner",
+    "title": "Implementation Planner",
+    "description": "Creates a staged technical plan from an approved specification.",
+    "category": "Engineering",
+    "model": "GPT-5",
+    "version": "v2.0",
+    "date": "2026-07-08",
+    "featured": true,
+    "tags": ["architecture", "tasks", "risk"],
+    "prompt": "Act as a pragmatic staff engineer.\n\nUsing the specification below, produce an implementation plan that includes:\n- Proposed architecture\n- Components and responsibilities\n- Data flow\n- Milestones in dependency order\n- Testing strategy\n- Security and privacy risks\n- Rollback plan\n\nPrefer the smallest design that satisfies the requirements. Explain major trade-offs.\n\nSPECIFICATION:\n{{specification}}",
+    "lesson": "Explicitly requesting a rollback plan surfaced operational risks before development began."
+  },
+  {
+    "id": "response-evaluator",
+    "title": "Response Quality Evaluator",
+    "description": "Scores generated output against a compact rubric and suggests targeted revisions.",
+    "category": "Evaluation",
+    "model": "Model-agnostic",
+    "version": "v1.1",
+    "date": "2026-07-12",
+    "featured": false,
+    "tags": ["quality", "rubric", "evaluation"],
+    "prompt": "Evaluate the candidate response against the rubric.\n\nFor each criterion, return:\n- Score from 1 to 5\n- Evidence from the response\n- One specific improvement\n\nThen provide an overall verdict: PASS, REVISE, or FAIL.\n\nRUBRIC:\n{{rubric}}\n\nCANDIDATE RESPONSE:\n{{candidate_response}}",
+    "lesson": "Evidence-based scoring produced more actionable feedback than generic critique requests."
+  },
+  {
+    "id": "release-notes-writer",
+    "title": "Release Notes Writer",
+    "description": "Converts technical change notes into concise, user-facing release notes.",
+    "category": "Communication",
+    "model": "GPT-4.1",
+    "version": "v1.0",
+    "date": "2026-06-20",
+    "featured": false,
+    "tags": ["release", "writing", "users"],
+    "prompt": "Write user-facing release notes from the technical changes below.\n\nRequirements:\n- Lead with user impact\n- Use plain language\n- Separate new features, improvements, and fixes\n- Do not expose internal implementation details\n- Do not claim benefits unsupported by the notes\n\nTECHNICAL CHANGES:\n{{changes}}",
+    "lesson": "Leading with user impact made the notes easier for non-technical stakeholders to scan."
+  }
+]

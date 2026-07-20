@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A curated collection of prompts used in my project." />
+  <title>Project Prompt Library</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell hero">
+      <a class="brand" href="./" aria-label="Prompt Library home">
+        <span class="brand-mark" aria-hidden="true">&gt;_</span>
+        <span>Prompt Library</span>
+      </a>
+
+      <div class="hero-copy">
+        <p class="eyebrow">PROJECT SHOWCASE</p>
+        <h1>The prompts behind the project</h1>
+        <p class="lede">
+          A practical, versioned collection of prompts, patterns, and lessons
+          learned while building <strong>Your Project Name</strong>.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#prompts">Explore prompts</a>
+          <a class="button secondary" href="https://github.com/YOUR_USERNAME/YOUR_REPOSITORY">View project on GitHub</a>
+        </div>
+      </div>
+
+      <dl class="stats" aria-label="Library statistics">
+        <div><dt id="prompt-count">0</dt><dd>Prompts</dd></div>
+        <div><dt id="category-count">0</dt><dd>Categories</dd></div>
+        <div><dt id="model-count">0</dt><dd>Models</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <main class="shell" id="prompts">
+    <section class="controls" aria-label="Prompt filters">
+      <label class="search-field">
+        <span class="sr-only">Search prompts</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+          <path d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input id="search" type="search" placeholder="Search titles, tags, models, or prompt text…" autocomplete="off" />
+      </label>
+      <div id="filters" class="filters" aria-label="Filter by category"></div>
+    </section>
+
+    <div class="results-heading">
+      <p id="result-summary" aria-live="polite"></p>
+      <select id="sort" aria-label="Sort prompts">
+        <option value="featured">Featured first</option>
+        <option value="title">Title A–Z</option>
+        <option value="newest">Newest first</option>
+      </select>
+    </div>
+
+    <section id="prompt-grid" class="prompt-grid" aria-label="Prompt collection"></section>
+
+    <section id="empty-state" class="empty-state" hidden>
+      <h2>No matching prompts</h2>
+      <p>Try a different search term or category.</p>
+      <button id="clear-filters" class="button secondary" type="button">Clear filters</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Built as a transparent record of the project’s prompt engineering process.</p>
+      <p><a href="https://github.com/YOUR_USERNAME/YOUR_REPOSITORY">Source on GitHub</a></p>
+    </div>
+  </footer>
+
+  <template id="prompt-template">
+    <article class="prompt-card">
+      <div class="card-topline">
+        <span class="category-badge"></span>
+        <span class="version"></span>
+      </div>
+      <h2 class="prompt-title"></h2>
+      <p class="prompt-description"></p>
+      <div class="metadata"></div>
+      <details>
+        <summary>View prompt</summary>
+        <div class="prompt-panel">
+          <pre><code class="prompt-text"></code></pre>
+          <button class="copy-button" type="button">Copy prompt</button>
+        </div>
+      </details>
+      <div class="tags" aria-label="Tags"></div>
+      <p class="lesson"></p>
+    </article>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
