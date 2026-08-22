@@ -21,7 +21,7 @@ const els = {
 
 async function loadPrompts() {
   try {
-    const response = await fetch("prompts.json");
+    const response = await fetch("prompts.json", { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.prompts = await response.json();
     renderFilters();
