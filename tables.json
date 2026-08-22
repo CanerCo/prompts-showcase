@@ -61,21 +61,4 @@
     ],
     "footnote": "Translated from German by the authors; the LLM's actual input, and the source of the summary shown, was the German original."
   },
-  {
-    "id": "placeholder-grid-example",
-    "kind": "grid",
-    "title": "Example \u2014 Results Table (replace or delete this entry)",
-    "section_ref": "\u00a75.1",
-    "category": "Benchmark Results",
-    "source": "Template",
-    "date": "2026-08-22",
-    "featured": false,
-    "tags": ["template", "benchmark"],
-    "note": "This entry only demonstrates the 'grid' format for numeric tables. Delete it once you add your own results, or duplicate it as a starting point.",
-    "columns": ["Condition", "Precision", "Recall", "F1"],
-    "rows": [
-      ["Schema-to-Schema (T)", "0.00", "0.00", "0.00"],
-      ["Schema-to-Schema (G)", "0.00", "0.00", "0.00"]
-    ]
-  }
 ]
