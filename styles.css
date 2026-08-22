@@ -604,6 +604,85 @@ code {
   font-style: italic;
 }
 
+/* ---------- figures ---------- */
+
+.figure-wrapper {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.figure-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figure-caption {
+  margin: 0.9rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* ---------- algorithm blocks ---------- */
+
+.algorithm-block {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--code-background);
+  overflow-x: auto;
+}
+
+.algo-line {
+  display: flex;
+  gap: 0.85rem;
+  padding: 0.12rem 0;
+  white-space: pre;
+}
+
+.algo-blank {
+  height: 0.55rem;
+}
+
+.algo-num {
+  flex: 0 0 auto;
+  width: 1.5rem;
+  text-align: right;
+  color: var(--muted);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.76rem;
+  user-select: none;
+}
+
+.algo-code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.86rem;
+  color: var(--text);
+}
+
+.algo-code strong {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.algo-indent-1 .algo-code {
+  padding-left: 1.4rem;
+}
+
+.algo-indent-2 .algo-code {
+  padding-left: 2.8rem;
+}
+
+.algo-indent-3 .algo-code {
+  padding-left: 4.2rem;
+}
+
 .empty-state {
   margin-top: 1rem;
   padding: 3rem 1rem;
