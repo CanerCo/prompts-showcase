@@ -60,5 +60,53 @@
       }
     ],
     "footnote": "Translated from German by the authors; the LLM's actual input, and the source of the summary shown, was the German original."
+  },
+    {
+    "id": "docling-figure",
+    "kind": "figure",
+    "title": "From PDF to DocItem Tree",
+    "section_ref": "Figure 4",
+    "category": "Figures",
+    "date": "2026-08-22",
+    "featured": true,
+    "tags": ["docling", "parsing", "pipeline", "docitem-tree"],
+    "note": "Docling's layout model assigns each page region a type; the reading-order stream it emits is then resolved into the nested DocItem tree the pipeline consumes.",
+    "image": "figures/docling-figure.svg",
+    "alt": "Diagram: a page mockup with typed layout regions (H, Tx, DI) is flattened into a reading-order stream by Docling, then resolved by heading-hierarchy resolution and chunking into a nested DocItem tree rooted at #/body.",
+    "caption": "From PDF to DocItem tree, illustrated on a document in our corpus. (a) Docling's layout model assigns each page region a type (H = section header, Tx = text, DI = document index / table); a six-element excerpt is shown. (b) The same elements as Docling emits them: a flat, ordered stream. (c) doc_chunks_to_doc_items (\u00a74.1) resolves heading levels into the nested tree the pipeline consumes, shown here in full for this document's top level, not restricted to the (a)\u2013(b) excerpt. The DOCUMENT_INDEX node under \u201cTable of Contents\u201d is retained in the tree but excluded from section text used downstream (\u00a74.1); nested subsections (e.g., \u201c3.1\u201d) and their list items are resolved into proper descendants rather than a flat sequence."
+  },
+    {
+    "id": "search-placement-algorithm",
+    "kind": "algorithm",
+    "title": "LLM-guided Placement Search",
+    "section_ref": "Algorithm 1",
+    "category": "Algorithms",
+    "date": "2026-08-22",
+    "featured": true,
+    "tags": ["taxonomy", "placement", "search", "pseudocode"],
+    "note": "LLM-guided placement of a summarized section s into the shared taxonomy T. Search recurses down one branch at a time, deciding at each node whether to stop, match, or explore further; Place arbitrates when more than one branch reports back.",
+    "lines": [
+      { "type": "function", "indent": 0, "text": "function Search(T, v, s)" },
+      { "type": "if", "indent": 1, "text": "if children(v) = \u2205 then" },
+      { "type": "stmt", "indent": 2, "text": "return \u27e8v, InsertAsChild, \u2205\u27e9" },
+      { "type": "end", "indent": 1, "text": "end if" },
+      { "type": "stmt", "indent": 1, "text": "(a, U) \u2190 LlmDecide(v, children(v), s)" },
+      { "type": "if", "indent": 1, "text": "if a \u2208 {MatchFound, ExploreFurther} then" },
+      { "type": "stmt", "indent": 2, "text": "return \u27e8v, a, U\u27e9 \u2225 Search(T, last(U), s)" },
+      { "type": "else", "indent": 1, "text": "else" },
+      { "type": "stmt", "indent": 2, "text": "return \u27e8v, a, U\u27e9" },
+      { "type": "end", "indent": 1, "text": "end if" },
+      { "type": "end", "indent": 0, "text": "end function" },
+      { "type": "blank" },
+      { "type": "function", "indent": 0, "text": "function Place(T, s)" },
+      { "type": "stmt", "indent": 1, "text": "C \u2190 Search(T, root(T), s)" },
+      { "type": "if", "indent": 1, "text": "if |C| > 1 then" },
+      { "type": "stmt", "indent": 2, "text": "(v, a, U) \u2190 Arbiter(C, s)" },
+      { "type": "else", "indent": 1, "text": "else" },
+      { "type": "stmt", "indent": 2, "text": "(v, a, U) \u2190 last(C)" },
+      { "type": "end", "indent": 1, "text": "end if" },
+      { "type": "stmt", "indent": 1, "text": "Apply action a at node v" },
+      { "type": "end", "indent": 0, "text": "end function" }
+    ]
   }
 ]
