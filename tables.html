@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Supplementary tables and worked examples for the Schema Induction project."
+  />
+  <title>Tables &amp; Examples &mdash; Schema Induction Prompt Repository</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#tables">Skip to table collection</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="site-title" href="./" aria-label="Prompt Repository home">
+        Prompt Repository
+      </a>
+      <nav class="site-nav" aria-label="Site sections">
+        <a href="index.html">Prompts</a>
+        <a href="tables.html" aria-current="page">Tables</a>
+      </nav>
+      <a
+        class="header-link"
+        href="https://github.com/canerco/prompts-showcase"
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub source
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro shell" aria-labelledby="page-title">
+      <p class="section-label">Project documentation</p>
+      <h1 id="page-title">Tables &amp; Worked Examples</h1>
+      <p class="intro-text">
+        This page collects supplementary tables and examples referenced from the paper &mdash;
+        worked pipeline outputs, comparison tables, and benchmark results &mdash; organized by
+        category and source document for review and reproducibility.
+      </p>
+
+      <div class="intro-links">
+        <a class="button primary" href="#tables">Browse tables</a>
+        <a class="button secondary" href="index.html">Browse prompts</a>
+      </div>
+
+      <dl class="stats" aria-label="Table repository statistics">
+        <div>
+          <dt id="entry-count">0</dt>
+          <dd>Entries</dd>
+        </div>
+        <div>
+          <dt id="category-count">0</dt>
+          <dd>Categories</dd>
+        </div>
+        <div>
+          <dt id="source-count">0</dt>
+          <dd>Sources</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="repository-section" id="tables" aria-labelledby="collection-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Reference collection</p>
+            <h2 id="collection-title">Table Collection</h2>
+          </div>
+          <p class="section-note">
+            Search by title, section, source, tag, or table content.
+          </p>
+        </div>
+
+        <section class="controls" aria-label="Table filters">
+          <label class="search-field">
+            <span class="sr-only">Search tables</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+              <path
+                d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search the table collection"
+              autocomplete="off"
+            />
+          </label>
+
+          <div id="filters" class="filters" aria-label="Filter by category"></div>
+        </section>
+
+        <div class="results-heading">
+          <p id="result-summary" aria-live="polite"></p>
+          <label class="sort-field">
+            <span>Sort by</span>
+            <select id="sort" aria-label="Sort tables">
+              <option value="featured">Featured first</option>
+              <option value="title">Title A&ndash;Z</option>
+              <option value="newest">Newest first</option>
+            </select>
+          </label>
+        </div>
+
+        <section
+          id="table-grid"
+          class="prompt-grid"
+          aria-label="Table collection"
+        ></section>
+
+        <section id="empty-state" class="empty-state" hidden>
+          <h2>No matching entries</h2>
+          <p>Try another search term or choose a different category.</p>
+          <button id="clear-filters" class="button secondary" type="button">
+            Clear filters
+          </button>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>
+        This page documents supplementary tables referenced from the paper for
+        transparency and reproducibility.
+      </p>
+      <a
+        href="https://github.com/canerco/prompts-showcase"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Source on GitHub
+      </a>
+    </div>
+  </footer>
+
+  <template id="table-template">
+    <article class="prompt-card table-card">
+      <div class="card-topline">
+        <span class="category-badge"></span>
+        <span class="version section-ref-badge"></span>
+      </div>
+
+      <h2 class="prompt-title table-title"></h2>
+      <p class="prompt-description table-byline"></p>
+      <p class="prompt-description table-note"></p>
+
+      <div class="table-body"></div>
+
+      <div class="metadata" aria-label="Table metadata"></div>
+      <div class="tags" aria-label="Table tags"></div>
+      <p class="lesson table-footnote"></p>
+    </article>
+  </template>
+
+  <script src="tables.js" defer></script>
+</body>
+</html>
