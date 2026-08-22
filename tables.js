@@ -21,7 +21,7 @@ const els = {
 
 async function loadTables() {
   try {
-    const response = await fetch("tables.json");
+    const response = await fetch("tables.json", { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.tables = await response.json();
     renderFilters();
