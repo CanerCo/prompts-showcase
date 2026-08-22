@@ -64,6 +64,10 @@ function getVisibleTables() {
     const gridText = item.kind === "grid"
       ? [item.columns || [], ...(item.rows || [])].flat().join(" ")
       : "";
+    const figureText = item.kind === "figure" ? (item.caption || "") : "";
+    const algoText = item.kind === "algorithm"
+      ? (item.lines || []).map(l => l.text || "").join(" ")
+      : "";
     const searchable = [
       item.title,
       item.section_ref,
@@ -72,6 +76,8 @@ function getVisibleTables() {
       item.note,
       fieldText,
       gridText,
+      figureText,
+      algoText,
       ...(item.tags || [])
     ].join(" ").toLowerCase();
     return categoryMatch && (!query || searchable.includes(query));
@@ -123,6 +129,10 @@ function createTableCard(item) {
   const body = fragment.querySelector(".table-body");
   if (item.kind === "grid") {
     body.append(buildGrid(item));
+  } else if (item.kind === "figure") {
+    body.append(buildFigure(item));
+  } else if (item.kind === "algorithm") {
+    body.append(buildAlgorithm(item));
   } else {
     body.append(buildFieldList(item));
   }
@@ -200,6 +210,71 @@ function buildGrid(item) {
   table.append(tbody);
 
   wrapper.append(table);
+  return wrapper;
+}
+
+function buildFigure(item) {
+  const wrapper = document.createElement("figure");
+  wrapper.className = "figure-wrapper";
+
+  const img = document.createElement("img");
+  img.src = item.image;
+  img.alt = item.alt || item.title || "";
+  img.loading = "lazy";
+  wrapper.append(img);
+
+  if (item.caption) {
+    const caption = document.createElement("figcaption");
+    caption.className = "figure-caption";
+    caption.textContent = item.caption;
+    wrapper.append(caption);
+  }
+
+  return wrapper;
+}
+
+const ALGO_KEYWORD_PATTERNS = {
+  function: text => text.replace(/^function\b/, "<strong>function</strong>"),
+  end: text => `<strong>${text}</strong>`,
+  else: text => `<strong>${text}</strong>`,
+  if: text => text
+    .replace(/^if\b/, "<strong>if</strong>")
+    .replace(/\bthen$/, "<strong>then</strong>"),
+  stmt: text => text.replace(/^return\b/, "<strong>return</strong>")
+};
+
+function buildAlgorithm(item) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "algorithm-block";
+
+  let lineNumber = 0;
+  (item.lines || []).forEach(line => {
+    const row = document.createElement("div");
+
+    if (line.type === "blank") {
+      row.className = "algo-line algo-blank";
+      wrapper.append(row);
+      return;
+    }
+
+    lineNumber += 1;
+    row.className = `algo-line algo-indent-${line.indent || 0}`;
+
+    const num = document.createElement("span");
+    num.className = "algo-num";
+    num.textContent = lineNumber;
+    row.append(num);
+
+    const code = document.createElement("span");
+    code.className = "algo-code";
+    const escaped = escapeHtml(line.text);
+    const formatter = ALGO_KEYWORD_PATTERNS[line.type];
+    code.innerHTML = formatter ? formatter(escaped) : escaped;
+    row.append(code);
+
+    wrapper.append(row);
+  });
+
   return wrapper;
 }
 
