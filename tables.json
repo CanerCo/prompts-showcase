@@ -3,19 +3,19 @@
     "id": "summary-example-1",
     "kind": "fields",
     "title": "Example Section Summary",
-    "section_ref": "\u00a72.2.7",
+    "section_ref": "§2.2.7",
     "category": "Section Summaries",
     "source": "Brainloop Code of Conduct",
     "date": "2026-08-05",
     "featured": true,
     "tags": ["examples", "summarization", "cross-lingual", "anonymization"],
-    "note": "Produced by summarize_chunk (\u00a74.2), taken from an unmodified pipeline run over the corpus. Input text is shown as an English translation by the authors for readability; the pipeline's actual input was the German source text, and the summary shown is the unmodified English output produced by the LLM from that German input.",
+    "note": "Produced by summarize_chunk (§4.2), taken from an unmodified pipeline run over the corpus. Input text is shown as an English translation by the authors for readability; the pipeline's actual input was the German source text, and the summary shown is the unmodified English output produced by the LLM from that German input.",
     "fields": [
       {
         "label": "Input",
         "quote": true,
         "highlight": ["Brainloop"],
-        "value": "The Supply Chain Due Diligence Act (LkSG, Federal Law Gazette 2021 Part I No. 46, p. 2959 et seq.) entered into force on 1 January 2023 and applies to companies [\u2026] with more than 3,000 employees domestically [\u2026]. Brainloop has carefully examined the provisions [\u2026] as part of a risk analysis. As a result, it has been determined that the provisions [\u2026] do not apply to Brainloop."
+        "value": "The Supply Chain Due Diligence Act (LkSG, Federal Law Gazette 2021 Part I No. 46, p. 2959 et seq.) entered into force on 1 January 2023 and applies to companies […] with more than 3,000 employees domestically […]. Brainloop has carefully examined the provisions […] as part of a risk analysis. As a result, it has been determined that the provisions […] do not apply to Brainloop."
       },
       {
         "label": "Label",
@@ -34,19 +34,19 @@
     "id": "summary-example-2",
     "kind": "fields",
     "title": "Example Section Summary",
-    "section_ref": "\u00a73",
+    "section_ref": "§3",
     "category": "Section Summaries",
     "source": "Brainloop Code of Conduct",
     "date": "2026-08-05",
     "featured": true,
     "tags": ["examples", "summarization", "cross-lingual", "anonymization"],
-    "note": "Produced by summarize_chunk (\u00a74.2), taken from an unmodified pipeline run over the corpus. Bold spans in the input mark the identifying information \u2014 company name and contact address \u2014 that the prompt instructs the model to strip; neither survives into the summary.",
+    "note": "Produced by summarize_chunk (§4.2), taken from an unmodified pipeline run over the corpus. Bold spans in the input mark the identifying information — company name and contact address — that the prompt instructs the model to strip; neither survives into the summary.",
     "fields": [
       {
         "label": "Input",
         "quote": true,
         "highlight": ["Brainloop", "legal@brainloop.de"],
-        "value": "Brainloop is committed to implementing EU Directive 2019/1937 [\u2026] (the 'EU Whistleblowing Directive'). Employees are required to [\u2026] report known violations [\u2026] promptly, in writing or by email, to legal@brainloop.de."
+        "value": "Brainloop is committed to implementing EU Directive 2019/1937 […] (the 'EU Whistleblowing Directive'). Employees are required to […] report known violations […] promptly, in writing or by email, to legal@brainloop.de."
       },
       {
         "label": "Label",
@@ -60,5 +60,5 @@
       }
     ],
     "footnote": "Translated from German by the authors; the LLM's actual input, and the source of the summary shown, was the German original."
-  },
+  }
 ]
