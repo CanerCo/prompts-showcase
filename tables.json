@@ -1,5 +1,67 @@
 [
  {
+  "id": "bm-cost-vs-recall",
+  "kind": "grid",
+  "date": "2026-09-01",
+  "featured": true,
+  "title": "Cost of Conditions A + B against Pooled Gap Recall",
+  "section_ref": "\u00a76.2",
+  "category": "Cost",
+  "source": "benchmark_v2 \u00b7 300 calls per model \u00b7 Bedrock call log",
+  "note": "Pooled across conditions A (raw text) and B (raw text + induced schema), 150 documents each. Cost is billed spend for those 300 calls.",
+  "columns": [
+   "Model",
+   "Pooled gap recall",
+   "Gaps found (of 516)",
+   "Cost, 300 calls",
+   "Cost per gap found"
+  ],
+  "rows": [
+   [
+    "GPT-5.6-terra",
+    "0.893",
+    "461",
+    "$9.63",
+    "$0.0209"
+   ],
+   [
+    "Claude Sonnet 5",
+    "0.855",
+    "441",
+    "$37.21",
+    "$0.0844"
+   ],
+   [
+    "gpt-oss-120B",
+    "0.384",
+    "198",
+    "$1.29",
+    "$0.0065"
+   ],
+   [
+    "Qwen3-235B",
+    "0.302",
+    "156",
+    "$1.18",
+    "$0.0076"
+   ],
+   [
+    "devstral-123B",
+    "0.209",
+    "108",
+    "$2.19",
+    "$0.0203"
+   ]
+  ],
+  "footnote": "GPT-5.6-terra finds more gaps than Claude Sonnet 5 for roughly a quarter of the spend. Devstral-123B costs more than either open model while finding the fewest gaps.",
+  "tags": [
+   "benchmark",
+   "cost",
+   "gap-recall",
+   "pooled"
+  ]
+ },
+ {
   "date": "2026-09-01",
   "featured": true,
   "id": "bm-confusion",
@@ -564,7 +626,7 @@
   "section_ref": "\u00a76.2",
   "category": "Complexity",
   "source": "benchmark_v2 \u00b7 150 documents",
-  "note": "C0 = 30 docs / 30 gaps, C1 = 30/30, C2 = 30/60, C3 = 38/138, Zero-Gaps = 22 controls. Tiers vary both the number of gaps per document and their subtlety, and these do not increase together.",
+  "note": "C0 = 30 docs / 30 gaps, C1 = 30/30, C2 = 30/60, C3 = 38/138, Zero-Gaps = 22 controls. Tiers vary both the number of gaps per document and their suBlety, and these do not increase together.",
   "columns": [
    "Model",
    "Condition",
