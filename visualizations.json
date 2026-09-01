@@ -1,25 +1,5 @@
 [
  {
-  "id": "fig-cost-vs-recall",
-  "kind": "figure",
-  "date": "2026-09-01",
-  "featured": true,
-  "title": "Cost of Conditions A + BT against Pooled Gap Recall",
-  "section_ref": "\u00a76.2",
-  "category": "Figures",
-  "source": "benchmark_v2 \u00b7 300 calls per model",
-  "note": "Pooled across conditions A (raw text) and BT (raw text + induced schema), 150 documents each. Cost is billed spend for those 300 calls.",
-  "image": "figures/cost-vs-recall.svg",
-  "alt": "Scatter plot of five language models, cost in dollars on the vertical axis against pooled gap recall on the horizontal axis, connected in order of increasing recall.",
-  "caption": "Models ordered left to right by recall. The three open models cluster cheaply at low recall; Claude Sonnet 5 climbs to $37.21, and GPT-5.6-terra then reaches higher recall for $9.63.",
-  "tags": [
-   "benchmark",
-   "cost",
-   "gap-recall",
-   "scatter"
-  ]
- },
- {
   "id": "summary-example-1",
   "kind": "fields",
   "title": "Example Section Summary",
@@ -233,7 +213,27 @@
     "type": "end",
     "indent": 0,
     "text": "end function"
-   }
+   },
+    {
+  "id": "fig-cost-vs-recall",
+  "kind": "figure",
+  "date": "2026-09-01",
+  "featured": true,
+  "title": "Cost of Conditions A + BT against Pooled Gap Recall",
+  "section_ref": "\u00a76.2",
+  "category": "Figures",
+  "source": "benchmark_v2 \u00b7 300 calls per model",
+  "note": "Pooled across conditions A (raw text) and BT (raw text + induced schema), 150 documents each. Cost is billed spend for those 300 calls.",
+  "image": "figures/cost-vs-recall.svg",
+  "alt": "Scatter plot of five language models, cost in dollars on the vertical axis against pooled gap recall on the horizontal axis, connected in order of increasing recall.",
+  "caption": "Models ordered left to right by recall. The three open models cluster cheaply at low recall; Claude Sonnet 5 climbs to $37.21, and GPT-5.6-terra then reaches higher recall for $9.63.",
+  "tags": [
+   "benchmark",
+   "cost",
+   "gap-recall",
+   "scatter"
+  ]
+ },
   ]
  }
 ]
