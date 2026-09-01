@@ -1,5 +1,5 @@
 const state = {
-  tables: [],
+  visualizations: [],
   query: "",
   category: "All",
   sort: "featured"
@@ -19,27 +19,27 @@ const els = {
   sourceCount: document.querySelector("#source-count")
 };
 
-async function loadTables() {
+async function loadVisualizations() {
   try {
-    const response = await fetch("tables.json", { cache: "no-cache" });
+    const response = await fetch("visualizations.json", { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    state.tables = await response.json();
+    state.visualizations = await response.json();
     renderFilters();
     renderStats();
     render();
   } catch (error) {
-    els.grid.innerHTML = `<p>Could not load the table collection. ${escapeHtml(error.message)}</p>`;
+    els.grid.innerHTML = `<p>Could not load the visualization collection. ${escapeHtml(error.message)}</p>`;
   }
 }
 
 function renderStats() {
-  els.entryCount.textContent = state.tables.length;
-  els.categoryCount.textContent = new Set(state.tables.map(t => t.category)).size;
-  els.sourceCount.textContent = new Set(state.tables.map(t => t.source).filter(Boolean)).size;
+  els.entryCount.textContent = state.visualizations.length;
+  els.categoryCount.textContent = new Set(state.visualizations.map(item => item.category)).size;
+  els.sourceCount.textContent = new Set(state.visualizations.map(item => item.source).filter(Boolean)).size;
 }
 
 function renderFilters() {
-  const categories = ["All", ...new Set(state.tables.map(t => t.category).sort())];
+  const categories = ["All", ...new Set(state.visualizations.map(item => item.category).sort())];
   els.filters.replaceChildren(...categories.map(category => {
     const button = document.createElement("button");
     button.type = "button";
@@ -56,9 +56,9 @@ function renderFilters() {
   }));
 }
 
-function getVisibleTables() {
+function getVisibleVisualizations() {
   const query = state.query.trim().toLowerCase();
-  const filtered = state.tables.filter(item => {
+  const filtered = state.visualizations.filter(item => {
     const categoryMatch = state.category === "All" || item.category === state.category;
     const fieldText = (item.fields || []).map(f => `${f.label} ${f.value}`).join(" ");
     const gridText = item.kind === "grid"
@@ -91,13 +91,13 @@ function getVisibleTables() {
 }
 
 function render() {
-  const tables = getVisibleTables();
-  els.grid.replaceChildren(...tables.map(createTableCard));
-  els.summary.textContent = `${tables.length} entr${tables.length === 1 ? "y" : "ies"} shown`;
-  els.empty.hidden = tables.length !== 0;
+  const visualizations = getVisibleVisualizations();
+  els.grid.replaceChildren(...visualizations.map(createVisualizationCard));
+  els.summary.textContent = `${visualizations.length} entr${visualizations.length === 1 ? "y" : "ies"} shown`;
+  els.empty.hidden = visualizations.length !== 0;
 }
 
-function createTableCard(item) {
+function createVisualizationCard(item) {
   const fragment = els.template.content.cloneNode(true);
   const article = fragment.querySelector("article");
   article.id = item.id;
@@ -326,4 +326,4 @@ els.clear.addEventListener("click", () => {
   render();
 });
 
-loadTables();
+loadVisualizations();
