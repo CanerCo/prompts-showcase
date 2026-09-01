@@ -1,0 +1,1523 @@
+[
+ {
+  "date": "2026-09-01",
+  "featured": true,
+  "id": "bm-confusion",
+  "kind": "grid",
+  "title": "Confusion Counts by Model and Condition",
+  "section_ref": "\u00a76.2",
+  "category": "Document-level",
+  "source": "benchmark_v2 \u00b7 150 documents",
+  "note": "A document counts as a true positive only if every annotated gap is found and no unsupported gap is reported. TN are the 30 gap-free control documents left correctly untouched.",
+  "columns": [
+   "Model",
+   "Condition",
+   "TP",
+   "FN",
+   "FP",
+   "TN"
+  ],
+  "rows": [
+   [
+    "GPT-5.6-terra",
+    "A: raw text",
+    "69",
+    "51",
+    "11",
+    "19"
+   ],
+   [
+    "GPT-5.6-terra",
+    "BT: schema + text",
+    "55",
+    "65",
+    "9",
+    "21"
+   ],
+   [
+    "GPT-5.6-terra",
+    "C: raw text + passages",
+    "74",
+    "46",
+    "9",
+    "21"
+   ],
+   [
+    "Claude Sonnet 5",
+    "A: raw text",
+    "65",
+    "55",
+    "9",
+    "21"
+   ],
+   [
+    "Claude Sonnet 5",
+    "BT: schema + text",
+    "70",
+    "50",
+    "9",
+    "21"
+   ],
+   [
+    "Claude Sonnet 5",
+    "C: raw text + passages",
+    "68",
+    "52",
+    "10",
+    "20"
+   ],
+   [
+    "gpt-oss-120B",
+    "A: raw text",
+    "37",
+    "83",
+    "4",
+    "26"
+   ],
+   [
+    "gpt-oss-120B",
+    "BT: schema + text",
+    "29",
+    "91",
+    "6",
+    "24"
+   ],
+   [
+    "gpt-oss-120B",
+    "C: raw text + passages",
+    "29",
+    "91",
+    "8",
+    "22"
+   ],
+   [
+    "Qwen3-235B",
+    "A: raw text",
+    "20",
+    "100",
+    "0",
+    "30"
+   ],
+   [
+    "Qwen3-235B",
+    "BT: schema + text",
+    "23",
+    "97",
+    "4",
+    "26"
+   ],
+   [
+    "Qwen3-235B",
+    "C: raw text + passages",
+    "15",
+    "105",
+    "0",
+    "30"
+   ],
+   [
+    "Devstral-123B",
+    "A: raw text",
+    "3",
+    "117",
+    "20",
+    "10"
+   ],
+   [
+    "Devstral-123B",
+    "BT: schema + text",
+    "4",
+    "116",
+    "12",
+    "18"
+   ],
+   [
+    "Devstral-123B",
+    "C: raw text + passages",
+    "0",
+    "120",
+    "18",
+    "12"
+   ]
+  ],
+  "tags": [
+   "benchmark",
+   "confusion-matrix",
+   "document-level"
+  ]
+ },
+ {
+  "date": "2026-09-01",
+  "featured": true,
+  "id": "bm-metrics",
+  "kind": "grid",
+  "title": "Evaluation Metrics by Model and Condition",
+  "section_ref": "\u00a76.2",
+  "category": "Document-level",
+  "source": "benchmark_v2 \u00b7 150 documents",
+  "note": "Balanced score is the unweighted mean of recall over gapped documents and specificity over controls. A strategy that never reports anything scores 0.500, so gap-level columns are reported alongside.",
+  "columns": [
+   "Model",
+   "Condition",
+   "Accuracy",
+   "Precision",
+   "Recall",
+   "Specificity",
+   "F1",
+   "Balanced",
+   "Gap recall",
+   "Gap prec."
+  ],
+  "rows": [
+   [
+    "GPT-5.6-terra",
+    "A: raw text",
+    "0.587",
+    "0.863",
+    "0.575",
+    "0.633",
+    "0.690",
+    "0.604",
+    "0.911",
+    "0.761"
+   ],
+   [
+    "GPT-5.6-terra",
+    "BT: schema + text",
+    "0.507",
+    "0.859",
+    "0.458",
+    "0.700",
+    "0.598",
+    "0.579",
+    "0.876",
+    "0.729"
+   ],
+   [
+    "GPT-5.6-terra",
+    "C: raw text + passages",
+    "0.633",
+    "0.892",
+    "0.617",
+    "0.700",
+    "0.729",
+    "0.658",
+    "0.895",
+    "0.765"
+   ],
+   [
+    "Claude Sonnet 5",
+    "A: raw text",
+    "0.573",
+    "0.878",
+    "0.542",
+    "0.700",
+    "0.670",
+    "0.621",
+    "0.868",
+    "0.775"
+   ],
+   [
+    "Claude Sonnet 5",
+    "BT: schema + text",
+    "0.607",
+    "0.886",
+    "0.583",
+    "0.700",
+    "0.704",
+    "0.642",
+    "0.841",
+    "0.807"
+   ],
+   [
+    "Claude Sonnet 5",
+    "C: raw text + passages",
+    "0.587",
+    "0.872",
+    "0.567",
+    "0.667",
+    "0.687",
+    "0.617",
+    "0.891",
+    "0.782"
+   ],
+   [
+    "gpt-oss-120B",
+    "A: raw text",
+    "0.420",
+    "0.902",
+    "0.308",
+    "0.867",
+    "0.460",
+    "0.588",
+    "0.422",
+    "0.762"
+   ],
+   [
+    "gpt-oss-120B",
+    "BT: schema + text",
+    "0.353",
+    "0.829",
+    "0.242",
+    "0.800",
+    "0.374",
+    "0.521",
+    "0.345",
+    "0.736"
+   ],
+   [
+    "gpt-oss-120B",
+    "C: raw text + passages",
+    "0.340",
+    "0.784",
+    "0.242",
+    "0.733",
+    "0.369",
+    "0.487",
+    "0.349",
+    "0.629"
+   ],
+   [
+    "Qwen3-235B",
+    "A: raw text",
+    "0.333",
+    "1.000",
+    "0.167",
+    "1.000",
+    "0.286",
+    "0.583",
+    "0.252",
+    "0.520"
+   ],
+   [
+    "Qwen3-235B",
+    "BT: schema + text",
+    "0.327",
+    "0.852",
+    "0.192",
+    "0.867",
+    "0.313",
+    "0.529",
+    "0.353",
+    "0.526"
+   ],
+   [
+    "Qwen3-235B",
+    "C: raw text + passages",
+    "0.300",
+    "1.000",
+    "0.125",
+    "1.000",
+    "0.222",
+    "0.562",
+    "0.225",
+    "0.552"
+   ],
+   [
+    "Devstral-123B",
+    "A: raw text",
+    "0.087",
+    "0.130",
+    "0.025",
+    "0.333",
+    "0.042",
+    "0.179",
+    "0.244",
+    "0.158"
+   ],
+   [
+    "Devstral-123B",
+    "BT: schema + text",
+    "0.147",
+    "0.250",
+    "0.033",
+    "0.600",
+    "0.059",
+    "0.317",
+    "0.174",
+    "0.117"
+   ],
+   [
+    "Devstral-123B",
+    "C: raw text + passages",
+    "0.080",
+    "0.000",
+    "0.000",
+    "0.400",
+    "n/a",
+    "0.200",
+    "0.252",
+    "0.090"
+   ]
+  ],
+  "tags": [
+   "benchmark",
+   "metrics",
+   "balanced-accuracy"
+  ]
+ },
+ {
+  "date": "2026-09-01",
+  "featured": false,
+  "id": "bm-solved",
+  "kind": "grid",
+  "title": "Documents Solved out of 150",
+  "section_ref": "\u00a76.2",
+  "category": "Document-level",
+  "source": "benchmark_v2 \u00b7 150 documents",
+  "note": "Completely correct documents, gapped and control combined.",
+  "columns": [
+   "Model",
+   "A",
+   "BT",
+   "C"
+  ],
+  "rows": [
+   [
+    "GPT-5.6-terra",
+    "88",
+    "76",
+    "95"
+   ],
+   [
+    "Claude Sonnet 5",
+    "86",
+    "91",
+    "88"
+   ],
+   [
+    "gpt-oss-120B",
+    "63",
+    "53",
+    "51"
+   ],
+   [
+    "Qwen3-235B",
+    "50",
+    "49",
+    "45"
+   ],
+   [
+    "Devstral-123B",
+    "13",
+    "22",
+    "12"
+   ]
+  ],
+  "tags": [
+   "benchmark",
+   "headline"
+  ]
+ },
+ {
+  "date": "2026-09-01",
+  "featured": true,
+  "id": "bm-mcnemar",
+  "kind": "grid",
+  "title": "Exact McNemar Tests, Paired on Documents",
+  "section_ref": "\u00a76.2",
+  "category": "Significance",
+  "source": "benchmark_v2 \u00b7 150 documents",
+  "note": "Exact binomial rather than chi-square, because discordant counts are single-digit. 3 of 15 comparisons reach p < .05, and all of them involve condition C.",
+  "columns": [
+   "Model",
+   "Comparison",
+   "Correct",
+   "Discordant",
+   "p",
+   "Verdict"
+  ],
+  "rows": [
+   [
+    "GPT-5.6-terra",
+    "A vs BT",
+    "88 vs 76",
+    "23/11",
+    "0.0576",
+    "not significant"
+   ],
+   [
+    "GPT-5.6-terra",
+    "A vs C",
+    "88 vs 95",
+    "9/16",
+    "0.2295",
+    "not significant"
+   ],
+   [
+    "GPT-5.6-terra",
+    "BT vs C",
+    "76 vs 95",
+    "7/26",
+    "0.0013",
+    "significant"
+   ],
+   [
+    "Claude Sonnet 5",
+    "A vs BT",
+    "86 vs 91",
+    "8/13",
+    "0.3833",
+    "not significant"
+   ],
+   [
+    "Claude Sonnet 5",
+    "A vs C",
+    "86 vs 88",
+    "13/15",
+    "0.8506",
+    "not significant"
+   ],
+   [
+    "Claude Sonnet 5",
+    "BT vs C",
+    "91 vs 88",
+    "12/9",
+    "0.6636",
+    "not significant"
+   ],
+   [
+    "gpt-oss-120B",
+    "A vs BT",
+    "63 vs 53",
+    "18/8",
+    "0.0755",
+    "not significant"
+   ],
+   [
+    "gpt-oss-120B",
+    "A vs C",
+    "63 vs 51",
+    "14/2",
+    "0.0042",
+    "significant"
+   ],
+   [
+    "gpt-oss-120B",
+    "BT vs C",
+    "53 vs 51",
+    "14/12",
+    "0.8450",
+    "not significant"
+   ],
+   [
+    "Qwen3-235B",
+    "A vs BT",
+    "50 vs 49",
+    "8/7",
+    "1.0000",
+    "not significant"
+   ],
+   [
+    "Qwen3-235B",
+    "A vs C",
+    "50 vs 45",
+    "8/3",
+    "0.2266",
+    "not significant"
+   ],
+   [
+    "Qwen3-235B",
+    "BT vs C",
+    "49 vs 45",
+    "11/7",
+    "0.4807",
+    "not significant"
+   ],
+   [
+    "Devstral-123B",
+    "A vs BT",
+    "13 vs 22",
+    "5/14",
+    "0.0636",
+    "not significant"
+   ],
+   [
+    "Devstral-123B",
+    "A vs C",
+    "13 vs 12",
+    "5/4",
+    "1.0000",
+    "not significant"
+   ],
+   [
+    "Devstral-123B",
+    "BT vs C",
+    "22 vs 12",
+    "13/3",
+    "0.0213",
+    "significant"
+   ]
+  ],
+  "footnote": "No A-vs-BT comparison is significant in any model; the smallest is p = .058 for GPT-5.6-terra.",
+  "tags": [
+   "benchmark",
+   "statistics",
+   "mcnemar"
+  ]
+ },
+ {
+  "date": "2026-09-01",
+  "featured": false,
+  "id": "bm-tiers",
+  "kind": "grid",
+  "title": "Documents Solved by Complexity Tier",
+  "section_ref": "\u00a76.2",
+  "category": "Complexity",
+  "source": "benchmark_v2 \u00b7 150 documents",
+  "note": "C0 = 30 docs / 30 gaps, C1 = 30/30, C2 = 30/60, C3 = 38/138, Zero-Gaps = 22 controls. Tiers vary both the number of gaps per document and their subtlety, and these do not increase together.",
+  "columns": [
+   "Model",
+   "Condition",
+   "C0",
+   "C1",
+   "C2",
+   "C3",
+   "Zero-gap"
+  ],
+  "rows": [
+   [
+    "GPT-5.6-terra",
+    "A: raw text",
+    "27/30",
+    "17/30",
+    "25/30",
+    "2/38",
+    "17/22"
+   ],
+   [
+    "GPT-5.6-terra",
+    "BT: schema + text",
+    "23/30",
+    "13/30",
+    "18/30",
+    "4/38",
+    "18/22"
+   ],
+   [
+    "GPT-5.6-terra",
+    "C: raw text + passages",
+    "27/30",
+    "18/30",
+    "26/30",
+    "6/38",
+    "18/22"
+   ],
+   [
+    "Claude Sonnet 5",
+    "A: raw text",
+    "22/30",
+    "17/30",
+    "22/30",
+    "7/38",
+    "18/22"
+   ],
+   [
+    "Claude Sonnet 5",
+    "BT: schema + text",
+    "24/30",
+    "19/30",
+    "23/30",
+    "7/38",
+    "18/22"
+   ],
+   [
+    "Claude Sonnet 5",
+    "C: raw text + passages",
+    "24/30",
+    "20/30",
+    "21/30",
+    "6/38",
+    "17/22"
+   ],
+   [
+    "gpt-oss-120B",
+    "A: raw text",
+    "18/30",
+    "14/30",
+    "4/30",
+    "6/38",
+    "21/22"
+   ],
+   [
+    "gpt-oss-120B",
+    "BT: schema + text",
+    "14/30",
+    "10/30",
+    "5/30",
+    "6/38",
+    "18/22"
+   ],
+   [
+    "gpt-oss-120B",
+    "C: raw text + passages",
+    "14/30",
+    "12/30",
+    "3/30",
+    "4/38",
+    "18/22"
+   ],
+   [
+    "Qwen3-235B",
+    "A: raw text",
+    "7/30",
+    "10/30",
+    "3/30",
+    "8/38",
+    "22/22"
+   ],
+   [
+    "Qwen3-235B",
+    "BT: schema + text",
+    "7/30",
+    "12/30",
+    "4/30",
+    "5/38",
+    "21/22"
+   ],
+   [
+    "Qwen3-235B",
+    "C: raw text + passages",
+    "6/30",
+    "7/30",
+    "2/30",
+    "8/38",
+    "22/22"
+   ],
+   [
+    "Devstral-123B",
+    "A: raw text",
+    "0/30",
+    "3/30",
+    "0/30",
+    "1/38",
+    "9/22"
+   ],
+   [
+    "Devstral-123B",
+    "BT: schema + text",
+    "2/30",
+    "1/30",
+    "1/30",
+    "4/38",
+    "14/22"
+   ],
+   [
+    "Devstral-123B",
+    "C: raw text + passages",
+    "0/30",
+    "0/30",
+    "0/30",
+    "0/38",
+    "12/22"
+   ]
+  ],
+  "tags": [
+   "benchmark",
+   "difficulty",
+   "complexity"
+  ]
+ },
+ {
+  "date": "2026-09-01",
+  "featured": false,
+  "id": "bm-gaplevel",
+  "kind": "grid",
+  "title": "Gap-Level Diagnostics",
+  "section_ref": "\u00a76.2",
+  "category": "Gap-level",
+  "source": "benchmark_v2 \u00b7 258 annotated gaps",
+  "note": "Secondary diagnostic. Gap-level recall credits partial recovery that the all-or-nothing document rule discards.",
+  "columns": [
+   "Model",
+   "Condition",
+   "Gaps found",
+   "Unsupported",
+   "Gap recall",
+   "Gap precision"
+  ],
+  "rows": [
+   [
+    "GPT-5.6-terra",
+    "A: raw text",
+    "235/258",
+    "74",
+    "0.911",
+    "0.761"
+   ],
+   [
+    "GPT-5.6-terra",
+    "BT: schema + text",
+    "226/258",
+    "84",
+    "0.876",
+    "0.729"
+   ],
+   [
+    "GPT-5.6-terra",
+    "C: raw text + passages",
+    "231/258",
+    "71",
+    "0.895",
+    "0.765"
+   ],
+   [
+    "Claude Sonnet 5",
+    "A: raw text",
+    "224/258",
+    "65",
+    "0.868",
+    "0.775"
+   ],
+   [
+    "Claude Sonnet 5",
+    "BT: schema + text",
+    "217/258",
+    "52",
+    "0.841",
+    "0.807"
+   ],
+   [
+    "Claude Sonnet 5",
+    "C: raw text + passages",
+    "230/258",
+    "64",
+    "0.891",
+    "0.782"
+   ],
+   [
+    "gpt-oss-120B",
+    "A: raw text",
+    "109/258",
+    "34",
+    "0.422",
+    "0.762"
+   ],
+   [
+    "gpt-oss-120B",
+    "BT: schema + text",
+    "89/258",
+    "32",
+    "0.345",
+    "0.736"
+   ],
+   [
+    "gpt-oss-120B",
+    "C: raw text + passages",
+    "90/258",
+    "53",
+    "0.349",
+    "0.629"
+   ],
+   [
+    "Qwen3-235B",
+    "A: raw text",
+    "65/258",
+    "60",
+    "0.252",
+    "0.520"
+   ],
+   [
+    "Qwen3-235B",
+    "BT: schema + text",
+    "91/258",
+    "82",
+    "0.353",
+    "0.526"
+   ],
+   [
+    "Qwen3-235B",
+    "C: raw text + passages",
+    "58/258",
+    "47",
+    "0.225",
+    "0.552"
+   ],
+   [
+    "Devstral-123B",
+    "A: raw text",
+    "63/258",
+    "337",
+    "0.244",
+    "0.158"
+   ],
+   [
+    "Devstral-123B",
+    "BT: schema + text",
+    "45/258",
+    "338",
+    "0.174",
+    "0.117"
+   ],
+   [
+    "Devstral-123B",
+    "C: raw text + passages",
+    "65/258",
+    "660",
+    "0.252",
+    "0.090"
+   ]
+  ],
+  "tags": [
+   "benchmark",
+   "gap-level",
+   "recall"
+  ]
+ },
+ {
+  "date": "2026-09-01",
+  "featured": false,
+  "id": "bm-failures",
+  "kind": "grid",
+  "title": "Failure Modes among False-Negative Documents",
+  "section_ref": "\u00a76.2",
+  "category": "Failure modes",
+  "source": "benchmark_v2 \u00b7 150 documents",
+  "note": "Why a gapped document failed. 'Complete but unsupported' means every annotated gap was found but an extra gap was also reported, which the scoring rule charges as a full failure.",
+  "columns": [
+   "Model",
+   "Condition",
+   "Found nothing",
+   "Partial",
+   "Partial + unsupported",
+   "Complete + unsupported"
+  ],
+  "rows": [
+   [
+    "GPT-5.6-terra",
+    "A: raw text",
+    "3",
+    "6",
+    "11",
+    "31"
+   ],
+   [
+    "GPT-5.6-terra",
+    "BT: schema + text",
+    "5",
+    "8",
+    "14",
+    "38"
+   ],
+   [
+    "GPT-5.6-terra",
+    "C: raw text + passages",
+    "5",
+    "1",
+    "14",
+    "26"
+   ],
+   [
+    "Claude Sonnet 5",
+    "A: raw text",
+    "4",
+    "7",
+    "15",
+    "29"
+   ],
+   [
+    "Claude Sonnet 5",
+    "BT: schema + text",
+    "4",
+    "11",
+    "18",
+    "17"
+   ],
+   [
+    "Claude Sonnet 5",
+    "C: raw text + passages",
+    "4",
+    "5",
+    "15",
+    "28"
+   ],
+   [
+    "gpt-oss-120B",
+    "A: raw text",
+    "32",
+    "27",
+    "20",
+    "4"
+   ],
+   [
+    "gpt-oss-120B",
+    "BT: schema + text",
+    "44",
+    "23",
+    "24",
+    "0"
+   ],
+   [
+    "gpt-oss-120B",
+    "C: raw text + passages",
+    "38",
+    "22",
+    "27",
+    "4"
+   ],
+   [
+    "Qwen3-235B",
+    "A: raw text",
+    "68",
+    "12",
+    "17",
+    "3"
+   ],
+   [
+    "Qwen3-235B",
+    "BT: schema + text",
+    "46",
+    "15",
+    "31",
+    "5"
+   ],
+   [
+    "Qwen3-235B",
+    "C: raw text + passages",
+    "74",
+    "10",
+    "18",
+    "3"
+   ],
+   [
+    "Devstral-123B",
+    "A: raw text",
+    "31",
+    "7",
+    "65",
+    "14"
+   ],
+   [
+    "Devstral-123B",
+    "BT: schema + text",
+    "50",
+    "4",
+    "55",
+    "7"
+   ],
+   [
+    "Devstral-123B",
+    "C: raw text + passages",
+    "23",
+    "2",
+    "82",
+    "13"
+   ]
+  ],
+  "tags": [
+   "benchmark",
+   "error-analysis"
+  ]
+ },
+ {
+  "date": "2026-09-01",
+  "featured": true,
+  "id": "cost-spend",
+  "kind": "grid",
+  "title": "Total Spend and Reliability",
+  "section_ref": "\u00a75.3",
+  "category": "Cost",
+  "source": "benchmark_v2 \u00b7 Bedrock call log",
+  "note": "Actual billed amounts from the project's Bedrock call log, computed from returned token counts. Claude Sonnet 5 was the only model to fail at all; those failures predate the max_tokens fix.",
+  "tags": [
+   "benchmark",
+   "cost",
+   "reliability"
+  ],
+  "columns": [
+   "Model",
+   "Calls",
+   "Failed",
+   "Cost",
+   "Cost/useful call"
+  ],
+  "rows": [
+   [
+    "claude-sonnet-5",
+    "718",
+    "118 (16%)",
+    "$69.52",
+    "$0.116"
+   ],
+   [
+    "gpt-5.6-terra",
+    "450",
+    "0",
+    "$17.48",
+    "$0.039"
+   ],
+   [
+    "devstral-123b",
+    "450",
+    "0",
+    "$3.95",
+    "$0.009"
+   ],
+   [
+    "gpt-oss-120b",
+    "500",
+    "0",
+    "$2.32",
+    "$0.005"
+   ],
+   [
+    "qwen3-235b",
+    "500",
+    "0",
+    "$2.22",
+    "$0.004"
+   ],
+   [
+    "Total",
+    "",
+    "",
+    "$95.49",
+    ""
+   ]
+  ]
+ },
+ {
+  "date": "2026-09-01",
+  "featured": true,
+  "id": "cost-effectiveness",
+  "kind": "grid",
+  "title": "Cost-Effectiveness at Each Model's Best Condition",
+  "section_ref": "\u00a75.3",
+  "category": "Cost",
+  "source": "benchmark_v2 \u00b7 Bedrock call log",
+  "note": "Dollars per completely solved document and per annotated gap recovered, at whichever condition each model performed best.",
+  "tags": [
+   "benchmark",
+   "cost",
+   "value"
+  ],
+  "columns": [
+   "Model",
+   "Best cond.",
+   "Docs solved",
+   "Gaps found",
+   "Total $",
+   "$/doc solved",
+   "$/gap found"
+  ],
+  "rows": [
+   [
+    "gpt-5.6-terra",
+    "C",
+    "95",
+    "231",
+    "17.48",
+    "0.184",
+    "0.0757"
+   ],
+   [
+    "claude-sonnet-5",
+    "BT",
+    "91",
+    "217",
+    "47.73",
+    "0.525",
+    "0.2200"
+   ],
+   [
+    "gpt-oss-120b",
+    "A",
+    "63",
+    "109",
+    "2.16",
+    "0.034",
+    "0.0198"
+   ],
+   [
+    "qwen3-235b",
+    "A",
+    "50",
+    "65",
+    "2.12",
+    "0.042",
+    "0.0326"
+   ],
+   [
+    "devstral-123b",
+    "BT",
+    "22",
+    "45",
+    "3.95",
+    "0.180",
+    "0.0878"
+   ]
+  ],
+  "footnote": "GPT-5.6-terra solves the most documents at one third the cost of Claude Sonnet 5, with zero failures."
+ },
+ {
+  "date": "2026-09-01",
+  "featured": false,
+  "id": "cost-percall",
+  "kind": "grid",
+  "title": "Per-Call Economics, Condition BT",
+  "section_ref": "\u00a75.3",
+  "category": "Cost",
+  "source": "benchmark_v2 \u00b7 Bedrock call log",
+  "note": "Successful calls only. Averaging over failed calls would understate the real cost of a usable prediction.",
+  "tags": [
+   "benchmark",
+   "cost",
+   "tokens",
+   "latency"
+  ],
+  "columns": [
+   "Model",
+   "Input tok/call",
+   "Output tok/call",
+   "$/call",
+   "Latency"
+  ],
+  "rows": [
+   [
+    "claude-sonnet-5",
+    "37,855",
+    "4,484",
+    "0.1326",
+    "59.3s"
+   ],
+   [
+    "gpt-5.6-terra",
+    "20,071",
+    "1,104",
+    "0.0534",
+    "11.7s"
+   ],
+   [
+    "devstral-123b",
+    "20,954",
+    "332",
+    "0.0109",
+    "7.6s"
+   ],
+   [
+    "gpt-oss-120b",
+    "20,132",
+    "2,309",
+    "0.0059",
+    "18.7s"
+   ],
+   [
+    "qwen3-235b",
+    "20,169",
+    "167",
+    "0.0060",
+    "3.6s"
+   ]
+  ],
+  "footnote": "Sonnet 5's input is roughly 1.9x the others for an identical prompt: its tokenizer is less efficient on this text."
+ },
+ {
+  "date": "2026-09-01",
+  "featured": true,
+  "id": "cost-reasoning",
+  "kind": "grid",
+  "title": "Extended Reasoning: Cost and Effect",
+  "section_ref": "\u00a75.3",
+  "category": "Cost",
+  "source": "benchmark_v2 \u00b7 Bedrock call log",
+  "note": "Claude Sonnet 5 on condition C, run twice with identical inputs. Disabling reasoning cut output by 87% and cost by 39% \u2014 and made the model unusable.",
+  "tags": [
+   "benchmark",
+   "reasoning",
+   "cost"
+  ],
+  "columns": [
+   "Setting",
+   "Output tok/call",
+   "$/call",
+   "Latency"
+  ],
+  "rows": [
+   [
+    "Reasoning on (cond. BT)",
+    "4,484",
+    "$0.1326",
+    "59.3s"
+   ],
+   [
+    "Reasoning off (cond. C)",
+    "564",
+    "$0.0810",
+    "7.0s"
+   ]
+  ],
+  "footnote": "Balanced document score fell from 0.617 to 0.275 with reasoning disabled (exact McNemar p < .0001, 49 documents broken against 3 fixed)."
+ },
+ {
+  "date": "2026-09-01",
+  "featured": false,
+  "id": "cost-failures",
+  "kind": "grid",
+  "title": "Failure Rate by Model",
+  "section_ref": "\u00a75.3",
+  "category": "Cost",
+  "source": "benchmark_v2 \u00b7 Bedrock call log",
+  "note": "Bedrock's default 4,096-token output cap was silently in force until max_tokens was forwarded explicitly. Reasoning-heavy generations exhausted the budget before emitting an answer.",
+  "tags": [
+   "benchmark",
+   "reliability",
+   "failures"
+  ],
+  "columns": [
+   "Model",
+   "Failure rate",
+   "Root cause"
+  ],
+  "rows": [
+   [
+    "claude-sonnet-5",
+    "22% (118/547)",
+    "Output-token limit"
+   ],
+   [
+    "all others",
+    "0%",
+    "\u2014"
+   ]
+  ]
+ },
+ {
+  "date": "2026-09-01",
+  "featured": false,
+  "id": "schema-req3",
+  "kind": "grid",
+  "title": "Referential Integrity Checks",
+  "section_ref": "\u00a76.1",
+  "category": "Schema quality",
+  "source": "schema_graph.json \u00b7 offline checks, no LLM",
+  "note": "All four checks are enforced at generation time against identifiers in the current schema, so this falsifies a failure of that constraint rather than establishing schema quality independently.",
+  "tags": [
+   "schema",
+   "referential-integrity"
+  ],
+  "columns": [
+   "Check",
+   "Result"
+  ],
+  "rows": [
+   [
+    "Dangling edges",
+    "0"
+   ],
+   [
+    "Malformed bindings",
+    "0 / 246"
+   ],
+   [
+    "Frame/element mismatches",
+    "0"
+   ],
+   [
+    "Single rooted tree",
+    "True"
+   ]
+  ]
+ },
+ {
+  "date": "2026-09-01",
+  "featured": false,
+  "id": "schema-req2",
+  "kind": "grid",
+  "title": "Provenance Coverage",
+  "section_ref": "\u00a76.1",
+  "category": "Schema quality",
+  "source": "schema_graph.json \u00b7 offline checks, no LLM",
+  "note": "Section-level coverage is complete. Document-level traceability is weaker: none of the 189 provenance records names the document its section pointer indexes.",
+  "tags": [
+   "schema",
+   "provenance"
+  ],
+  "columns": [
+   "Check",
+   "Result"
+  ],
+  "rows": [
+   [
+    "Concepts with source provenance",
+    "107/107 (1.0)"
+   ],
+   [
+    "Values with verbatim source quotes",
+    "1.0 of 246"
+   ],
+   [
+    "Bindings with doc_item_id",
+    "1.0"
+   ]
+  ]
+ },
+ {
+  "date": "2026-09-01",
+  "featured": true,
+  "id": "schema-req1",
+  "kind": "grid",
+  "title": "Near-Duplicate Concept Pairs, Ranked and Adjudicated",
+  "section_ref": "\u00a76.1",
+  "category": "Schema quality",
+  "source": "schema_graph.json \u00b7 offline checks, no LLM",
+  "note": "Eight of the eighteen pairs at similarity 0.80 or above were manually adjudicated by one author. The three confirmed duplicates scored 0.807-0.828, below all four pairs judged correctly distinct.",
+  "tags": [
+   "schema",
+   "unification",
+   "duplicates"
+  ],
+  "columns": [
+   "Similarity",
+   "Pair",
+   "Adjudication"
+  ],
+  "rows": [
+   [
+    "0.880",
+    "Leadership Compliance Responsibilities (Leadership Role) \u2016 Compliance Responsibilities",
+    "not adjudicated"
+   ],
+   [
+    "0.879",
+    "Social Responsibility \u2016 Environmental Responsibility",
+    "correctly distinct"
+   ],
+   [
+    "0.873",
+    "Supplier Conduct and Compliance (External) \u2016 Corporate Conduct and Compliance Overview",
+    "not adjudicated"
+   ],
+   [
+    "0.870",
+    "Prohibition of Child Labor \u2016 Prohibition of Forced Labor",
+    "correctly distinct"
+   ],
+   [
+    "0.858",
+    "Ethical Principles and Core Values \u2016 Ethical Principles and Training",
+    "not adjudicated"
+   ],
+   [
+    "0.847",
+    "Compliance Responsibilities \u2016 Compliance Commitments",
+    "not adjudicated"
+   ],
+   [
+    "0.844",
+    "Charitable Contributions Policy \u2016 Political Contributions Policy",
+    "correctly distinct"
+   ],
+   [
+    "0.843",
+    "Data Center Environmental Security \u2016 Environmental Protection and Sustainability",
+    "correctly distinct (lexical false friend)"
+   ],
+   [
+    "0.842",
+    "Corporate Compliance and Integrity \u2016 Compliance Investigations and Reporting",
+    "not adjudicated"
+   ],
+   [
+    "0.828",
+    "Workplace Conduct and Ethics \u2016 Employee Ethical Conduct Guidelines",
+    "duplicate"
+   ]
+  ],
+  "footnote": "Ten further pairs in the 0.80+ band were never adjudicated, so three confirmed duplicates is a lower bound rather than a total."
+ },
+ {
+  "date": "2026-09-01",
+  "featured": false,
+  "id": "schema-shape",
+  "kind": "grid",
+  "title": "Induced Taxonomy Shape",
+  "section_ref": "\u00a76.1",
+  "category": "Schema quality",
+  "source": "schema_graph.json \u00b7 offline checks, no LLM",
+  "note": "Structural properties of the exported schema graph.",
+  "tags": [
+   "schema",
+   "taxonomy"
+  ],
+  "columns": [
+   "Property",
+   "Value"
+  ],
+  "rows": [
+   [
+    "Concepts",
+    "107"
+   ],
+   [
+    "Max depth",
+    "8"
+   ],
+   [
+    "Leaves / internal",
+    "82 / 25"
+   ],
+   [
+    "Mean branching (internal)",
+    "4.24"
+   ],
+   [
+    "Frames / frame elements",
+    "132 / 1221"
+   ],
+   [
+    "Mean frames per concept",
+    "3.45"
+   ],
+   [
+    "Concepts with no frame",
+    "0"
+   ]
+  ]
+ },
+ {
+  "id": "schema-docprov",
+  "kind": "grid",
+  "featured": false,
+  "title": "Document-Level Provenance",
+  "section_ref": "\u00a76.1",
+  "category": "Schema quality",
+  "source": "schema_graph.json \u00b7 offline checks, no LLM",
+  "date": "2026-09-01",
+  "note": "Each provenance record stores its supporting section as a document-internal positional pointer such as #/texts/128, which is a valid address in most documents and identifies none of them.",
+  "columns": [
+   "Measure",
+   "Value"
+  ],
+  "rows": [
+   [
+    "Provenance records",
+    "189"
+   ],
+   [
+    "Distinct section pointers",
+    "106"
+   ],
+   [
+    "Records naming a source document",
+    "0/189 (0.0%)"
+   ],
+   [
+    "Pointers valid in more than one document",
+    "81/106 (76.4%)"
+   ],
+   [
+    "Resolution pool",
+    "94 parsed documents"
+   ],
+   [
+    "Document-level traceable from export alone",
+    "No"
+   ]
+  ],
+  "footnote": "matching_doc_name was added to the node model after this artifact was exported; re-exporting the schema drives the naming figure to 100%.",
+  "tags": [
+   "schema",
+   "provenance",
+   "traceability"
+  ]
+ }
+]
