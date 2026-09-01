@@ -213,8 +213,10 @@
     "type": "end",
     "indent": 0,
     "text": "end function"
-   },
-    {
+   }
+  ]
+ }.
+     {
   "id": "fig-cost-vs-recall",
   "kind": "figure",
   "date": "2026-09-01",
@@ -234,6 +236,4 @@
    "scatter"
   ]
  },
-  ]
- }
 ]
