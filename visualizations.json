@@ -1,113 +1,239 @@
 [
-
-  {
-    "id": "summary-example-1",
-    "kind": "fields",
-    "title": "Example Section Summary",
-    "section_ref": "\u00a72.2.7",
-    "category": "Section Summaries",
-    "source": "Brainloop Code of Conduct",
-    "date": "2026-08-05",
-    "featured": true,
-    "tags": ["examples", "summarization", "cross-lingual", "anonymization"],
-    "note": "Produced by summarize_chunk (\u00a74.2), taken from an unmodified pipeline run over the corpus. Input text is shown as an English translation by the authors for readability; the pipeline's actual input was the German source text, and the summary shown is the unmodified English output produced by the LLM from that German input.",
-    "fields": [
-      {
-        "label": "Input",
-        "quote": true,
-        "highlight": ["Brainloop"],
-        "value": "The Supply Chain Due Diligence Act (LkSG, Federal Law Gazette 2021 Part I No. 46, p. 2959 et seq.) entered into force on 1 January 2023 and applies to companies [\u2026] with more than 3,000 employees domestically [\u2026]. Brainloop has carefully examined the provisions [\u2026] as part of a risk analysis. As a result, it has been determined that the provisions [\u2026] do not apply to Brainloop."
-      },
-      {
-        "label": "Label",
-        "quote": false,
-        "value": "Supply chain due diligence law applicability"
-      },
-      {
-        "label": "Summary",
-        "quote": true,
-        "value": "This section discusses the applicability and scope of a supply chain due diligence law, including its objectives and the organization's compliance assessment."
-      }
+ {
+  "id": "fig-cost-vs-recall",
+  "kind": "figure",
+  "date": "2026-09-01",
+  "featured": true,
+  "title": "Cost of Conditions A + BT against Pooled Gap Recall",
+  "section_ref": "\u00a76.2",
+  "category": "Figures",
+  "source": "benchmark_v2 \u00b7 300 calls per model",
+  "note": "Pooled across conditions A (raw text) and BT (raw text + induced schema), 150 documents each. Cost is billed spend for those 300 calls.",
+  "image": "figures/cost-vs-recall.svg",
+  "alt": "Scatter plot of five language models, cost in dollars on the vertical axis against pooled gap recall on the horizontal axis, connected in order of increasing recall.",
+  "caption": "Models ordered left to right by recall. The three open models cluster cheaply at low recall; Claude Sonnet 5 climbs to $37.21, and GPT-5.6-terra then reaches higher recall for $9.63.",
+  "tags": [
+   "benchmark",
+   "cost",
+   "gap-recall",
+   "scatter"
+  ]
+ },
+ {
+  "id": "summary-example-1",
+  "kind": "fields",
+  "title": "Example Section Summary",
+  "section_ref": "\u00a72.2.7",
+  "category": "Section Summaries",
+  "source": "Brainloop Code of Conduct",
+  "date": "2026-08-05",
+  "featured": true,
+  "tags": [
+   "examples",
+   "summarization",
+   "cross-lingual",
+   "anonymization"
+  ],
+  "note": "Produced by summarize_chunk (\u00a74.2), taken from an unmodified pipeline run over the corpus. Input text is shown as an English translation by the authors for readability; the pipeline's actual input was the German source text, and the summary shown is the unmodified English output produced by the LLM from that German input.",
+  "fields": [
+   {
+    "label": "Input",
+    "quote": true,
+    "highlight": [
+     "Brainloop"
     ],
-    "footnote": "Translated from German by the authors; the LLM's actual input, and the source of the summary shown, was the German original."
-  },
-  {
-    "id": "summary-example-2",
-    "kind": "fields",
-    "title": "Example Section Summary",
-    "section_ref": "\u00a73",
-    "category": "Section Summaries",
-    "source": "Brainloop Code of Conduct",
-    "date": "2026-08-05",
-    "featured": true,
-    "tags": ["examples", "summarization", "cross-lingual", "anonymization"],
-    "note": "Produced by summarize_chunk (\u00a74.2), taken from an unmodified pipeline run over the corpus. Bold spans in the input mark the identifying information \u2014 company name and contact address \u2014 that the prompt instructs the model to strip; neither survives into the summary.",
-    "fields": [
-      {
-        "label": "Input",
-        "quote": true,
-        "highlight": ["Brainloop", "legal@brainloop.de"],
-        "value": "Brainloop is committed to implementing EU Directive 2019/1937 [\u2026] (the 'EU Whistleblowing Directive'). Employees are required to [\u2026] report known violations [\u2026] promptly, in writing or by email, to legal@brainloop.de."
-      },
-      {
-        "label": "Label",
-        "quote": false,
-        "value": "Whistleblowing and Compliance Reporting"
-      },
-      {
-        "label": "Summary",
-        "quote": true,
-        "value": "This section outlines the organization's commitment to implementing whistleblowing directives and protecting those who report violations. It includes procedures for reporting and handling such matters confidentially and securely."
-      }
+    "value": "The Supply Chain Due Diligence Act (LkSG, Federal Law Gazette 2021 Part I No. 46, p. 2959 et seq.) entered into force on 1 January 2023 and applies to companies [\u2026] with more than 3,000 employees domestically [\u2026]. Brainloop has carefully examined the provisions [\u2026] as part of a risk analysis. As a result, it has been determined that the provisions [\u2026] do not apply to Brainloop."
+   },
+   {
+    "label": "Label",
+    "quote": false,
+    "value": "Supply chain due diligence law applicability"
+   },
+   {
+    "label": "Summary",
+    "quote": true,
+    "value": "This section discusses the applicability and scope of a supply chain due diligence law, including its objectives and the organization's compliance assessment."
+   }
+  ],
+  "footnote": "Translated from German by the authors; the LLM's actual input, and the source of the summary shown, was the German original."
+ },
+ {
+  "id": "summary-example-2",
+  "kind": "fields",
+  "title": "Example Section Summary",
+  "section_ref": "\u00a73",
+  "category": "Section Summaries",
+  "source": "Brainloop Code of Conduct",
+  "date": "2026-08-05",
+  "featured": true,
+  "tags": [
+   "examples",
+   "summarization",
+   "cross-lingual",
+   "anonymization"
+  ],
+  "note": "Produced by summarize_chunk (\u00a74.2), taken from an unmodified pipeline run over the corpus. Bold spans in the input mark the identifying information \u2014 company name and contact address \u2014 that the prompt instructs the model to strip; neither survives into the summary.",
+  "fields": [
+   {
+    "label": "Input",
+    "quote": true,
+    "highlight": [
+     "Brainloop",
+     "legal@brainloop.de"
     ],
-    "footnote": "Translated from German by the authors; the LLM's actual input, and the source of the summary shown, was the German original."
-  },
-  {
-    "id": "docling-figure",
-    "kind": "figure",
-    "title": "From PDF to DocItem Tree",
-    "section_ref": "Figure 4",
-    "category": "Figures",
-    "date": "2026-08-22",
-    "featured": true,
-    "tags": ["docling", "parsing", "pipeline", "docitem-tree"],
-    "note": "Docling's layout model assigns each page region a type; the reading-order stream it emits is then resolved into the nested DocItem tree the pipeline consumes.",
-    "image": "figures/docling-figure.svg",
-    "alt": "Diagram: a page mockup with typed layout regions (H, Tx, DI) is flattened into a reading-order stream by Docling, then resolved by heading-hierarchy resolution and chunking into a nested DocItem tree rooted at #/body.",
-    "caption": "From PDF to DocItem tree, illustrated on a document in our corpus. (a) Docling's layout model assigns each page region a type (H = section header, Tx = text, DI = document index / table); a six-element excerpt is shown. (b) The same elements as Docling emits them: a flat, ordered stream. (c) doc_chunks_to_doc_items (\u00a74.1) resolves heading levels into the nested tree the pipeline consumes, shown here in full for this document's top level, not restricted to the (a)\u2013(b) excerpt. The DOCUMENT_INDEX node under \u201cTable of Contents\u201d is retained in the tree but excluded from section text used downstream (\u00a74.1); nested subsections (e.g., \u201c3.1\u201d) and their list items are resolved into proper descendants rather than a flat sequence."
-  },
-  {
-    "id": "search-placement-algorithm",
-    "kind": "algorithm",
-    "title": "LLM-guided Placement Search",
-    "section_ref": "Algorithm 1",
-    "category": "Algorithms",
-    "date": "2026-08-22",
-    "featured": true,
-    "tags": ["taxonomy", "placement", "search", "pseudocode"],
-    "note": "LLM-guided placement of a summarized section s into the shared taxonomy T. Search recurses down one branch at a time, deciding at each node whether to stop, match, or explore further; Place arbitrates when more than one branch reports back.",
-    "lines": [
-      { "type": "function", "indent": 0, "text": "function Search(T, v, s)" },
-      { "type": "if", "indent": 1, "text": "if children(v) = \u2205 then" },
-      { "type": "stmt", "indent": 2, "text": "return \u27e8v, InsertAsChild, \u2205\u27e9" },
-      { "type": "end", "indent": 1, "text": "end if" },
-      { "type": "stmt", "indent": 1, "text": "(a, U) \u2190 LlmDecide(v, children(v), s)" },
-      { "type": "if", "indent": 1, "text": "if a \u2208 {MatchFound, ExploreFurther} then" },
-      { "type": "stmt", "indent": 2, "text": "return \u27e8v, a, U\u27e9 \u2225 Search(T, last(U), s)" },
-      { "type": "else", "indent": 1, "text": "else" },
-      { "type": "stmt", "indent": 2, "text": "return \u27e8v, a, U\u27e9" },
-      { "type": "end", "indent": 1, "text": "end if" },
-      { "type": "end", "indent": 0, "text": "end function" },
-      { "type": "blank" },
-      { "type": "function", "indent": 0, "text": "function Place(T, s)" },
-      { "type": "stmt", "indent": 1, "text": "C \u2190 Search(T, root(T), s)" },
-      { "type": "if", "indent": 1, "text": "if |C| > 1 then" },
-      { "type": "stmt", "indent": 2, "text": "(v, a, U) \u2190 Arbiter(C, s)" },
-      { "type": "else", "indent": 1, "text": "else" },
-      { "type": "stmt", "indent": 2, "text": "(v, a, U) \u2190 last(C)" },
-      { "type": "end", "indent": 1, "text": "end if" },
-      { "type": "stmt", "indent": 1, "text": "Apply action a at node v" },
-      { "type": "end", "indent": 0, "text": "end function" }
-    ]
-  }
+    "value": "Brainloop is committed to implementing EU Directive 2019/1937 [\u2026] (the 'EU Whistleblowing Directive'). Employees are required to [\u2026] report known violations [\u2026] promptly, in writing or by email, to legal@brainloop.de."
+   },
+   {
+    "label": "Label",
+    "quote": false,
+    "value": "Whistleblowing and Compliance Reporting"
+   },
+   {
+    "label": "Summary",
+    "quote": true,
+    "value": "This section outlines the organization's commitment to implementing whistleblowing directives and protecting those who report violations. It includes procedures for reporting and handling such matters confidentially and securely."
+   }
+  ],
+  "footnote": "Translated from German by the authors; the LLM's actual input, and the source of the summary shown, was the German original."
+ },
+ {
+  "id": "docling-figure",
+  "kind": "figure",
+  "title": "From PDF to DocItem Tree",
+  "section_ref": "Figure 4",
+  "category": "Figures",
+  "date": "2026-08-22",
+  "featured": true,
+  "tags": [
+   "docling",
+   "parsing",
+   "pipeline",
+   "docitem-tree"
+  ],
+  "note": "Docling's layout model assigns each page region a type; the reading-order stream it emits is then resolved into the nested DocItem tree the pipeline consumes.",
+  "image": "figures/docling-figure.svg",
+  "alt": "Diagram: a page mockup with typed layout regions (H, Tx, DI) is flattened into a reading-order stream by Docling, then resolved by heading-hierarchy resolution and chunking into a nested DocItem tree rooted at #/body.",
+  "caption": "From PDF to DocItem tree, illustrated on a document in our corpus. (a) Docling's layout model assigns each page region a type (H = section header, Tx = text, DI = document index / table); a six-element excerpt is shown. (b) The same elements as Docling emits them: a flat, ordered stream. (c) doc_chunks_to_doc_items (\u00a74.1) resolves heading levels into the nested tree the pipeline consumes, shown here in full for this document's top level, not restricted to the (a)\u2013(b) excerpt. The DOCUMENT_INDEX node under \u201cTable of Contents\u201d is retained in the tree but excluded from section text used downstream (\u00a74.1); nested subsections (e.g., \u201c3.1\u201d) and their list items are resolved into proper descendants rather than a flat sequence."
+ },
+ {
+  "id": "search-placement-algorithm",
+  "kind": "algorithm",
+  "title": "LLM-guided Placement Search",
+  "section_ref": "Algorithm 1",
+  "category": "Algorithms",
+  "date": "2026-08-22",
+  "featured": true,
+  "tags": [
+   "taxonomy",
+   "placement",
+   "search",
+   "pseudocode"
+  ],
+  "note": "LLM-guided placement of a summarized section s into the shared taxonomy T. Search recurses down one branch at a time, deciding at each node whether to stop, match, or explore further; Place arbitrates when more than one branch reports back.",
+  "lines": [
+   {
+    "type": "function",
+    "indent": 0,
+    "text": "function Search(T, v, s)"
+   },
+   {
+    "type": "if",
+    "indent": 1,
+    "text": "if children(v) = \u2205 then"
+   },
+   {
+    "type": "stmt",
+    "indent": 2,
+    "text": "return \u27e8v, InsertAsChild, \u2205\u27e9"
+   },
+   {
+    "type": "end",
+    "indent": 1,
+    "text": "end if"
+   },
+   {
+    "type": "stmt",
+    "indent": 1,
+    "text": "(a, U) \u2190 LlmDecide(v, children(v), s)"
+   },
+   {
+    "type": "if",
+    "indent": 1,
+    "text": "if a \u2208 {MatchFound, ExploreFurther} then"
+   },
+   {
+    "type": "stmt",
+    "indent": 2,
+    "text": "return \u27e8v, a, U\u27e9 \u2225 Search(T, last(U), s)"
+   },
+   {
+    "type": "else",
+    "indent": 1,
+    "text": "else"
+   },
+   {
+    "type": "stmt",
+    "indent": 2,
+    "text": "return \u27e8v, a, U\u27e9"
+   },
+   {
+    "type": "end",
+    "indent": 1,
+    "text": "end if"
+   },
+   {
+    "type": "end",
+    "indent": 0,
+    "text": "end function"
+   },
+   {
+    "type": "blank"
+   },
+   {
+    "type": "function",
+    "indent": 0,
+    "text": "function Place(T, s)"
+   },
+   {
+    "type": "stmt",
+    "indent": 1,
+    "text": "C \u2190 Search(T, root(T), s)"
+   },
+   {
+    "type": "if",
+    "indent": 1,
+    "text": "if |C| > 1 then"
+   },
+   {
+    "type": "stmt",
+    "indent": 2,
+    "text": "(v, a, U) \u2190 Arbiter(C, s)"
+   },
+   {
+    "type": "else",
+    "indent": 1,
+    "text": "else"
+   },
+   {
+    "type": "stmt",
+    "indent": 2,
+    "text": "(v, a, U) \u2190 last(C)"
+   },
+   {
+    "type": "end",
+    "indent": 1,
+    "text": "end if"
+   },
+   {
+    "type": "stmt",
+    "indent": 1,
+    "text": "Apply action a at node v"
+   },
+   {
+    "type": "end",
+    "indent": 0,
+    "text": "end function"
+   }
+  ]
+ }
 ]
