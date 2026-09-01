@@ -19,9 +19,13 @@ const els = {
   sourceCount: document.querySelector("#source-count")
 };
 
+// The tables page reuses this renderer; it declares its own data file via
+// data-source on the grid element. Defaults to the visualization collection.
+const DATA_SOURCE = els.grid?.dataset.source || "visualizations.json";
+
 async function loadVisualizations() {
   try {
-    const response = await fetch("visualizations.json", { cache: "no-cache" });
+    const response = await fetch(DATA_SOURCE, { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.visualizations = await response.json();
     renderFilters();
