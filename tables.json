@@ -28,7 +28,7 @@
    ],
    [
     "GPT-5.6-terra",
-    "BT: schema + text",
+    "B: schema + text",
     "55",
     "65",
     "9",
@@ -52,7 +52,7 @@
    ],
    [
     "Claude Sonnet 5",
-    "BT: schema + text",
+    "B: schema + text",
     "70",
     "50",
     "9",
@@ -76,7 +76,7 @@
    ],
    [
     "gpt-oss-120B",
-    "BT: schema + text",
+    "B: schema + text",
     "29",
     "91",
     "6",
@@ -100,7 +100,7 @@
    ],
    [
     "Qwen3-235B",
-    "BT: schema + text",
+    "B: schema + text",
     "23",
     "97",
     "4",
@@ -124,7 +124,7 @@
    ],
    [
     "Devstral-123B",
-    "BT: schema + text",
+    "B: schema + text",
     "4",
     "116",
     "12",
@@ -182,7 +182,7 @@
    ],
    [
     "GPT-5.6-terra",
-    "BT: schema + text",
+    "B: schema + text",
     "0.507",
     "0.859",
     "0.458",
@@ -218,7 +218,7 @@
    ],
    [
     "Claude Sonnet 5",
-    "BT: schema + text",
+    "B: schema + text",
     "0.607",
     "0.886",
     "0.583",
@@ -254,7 +254,7 @@
    ],
    [
     "gpt-oss-120B",
-    "BT: schema + text",
+    "B: schema + text",
     "0.353",
     "0.829",
     "0.242",
@@ -290,7 +290,7 @@
    ],
    [
     "Qwen3-235B",
-    "BT: schema + text",
+    "B: schema + text",
     "0.327",
     "0.852",
     "0.192",
@@ -326,7 +326,7 @@
    ],
    [
     "Devstral-123B",
-    "BT: schema + text",
+    "B: schema + text",
     "0.147",
     "0.250",
     "0.033",
@@ -368,7 +368,7 @@
   "columns": [
    "Model",
    "A",
-   "BT",
+   "B",
    "C"
   ],
   "rows": [
@@ -429,7 +429,7 @@
   "rows": [
    [
     "GPT-5.6-terra",
-    "A vs BT",
+    "A vs B",
     "88 vs 76",
     "23/11",
     "0.0576",
@@ -445,7 +445,7 @@
    ],
    [
     "GPT-5.6-terra",
-    "BT vs C",
+    "B vs C",
     "76 vs 95",
     "7/26",
     "0.0013",
@@ -453,7 +453,7 @@
    ],
    [
     "Claude Sonnet 5",
-    "A vs BT",
+    "A vs B",
     "86 vs 91",
     "8/13",
     "0.3833",
@@ -469,7 +469,7 @@
    ],
    [
     "Claude Sonnet 5",
-    "BT vs C",
+    "B vs C",
     "91 vs 88",
     "12/9",
     "0.6636",
@@ -477,7 +477,7 @@
    ],
    [
     "gpt-oss-120B",
-    "A vs BT",
+    "A vs B",
     "63 vs 53",
     "18/8",
     "0.0755",
@@ -493,7 +493,7 @@
    ],
    [
     "gpt-oss-120B",
-    "BT vs C",
+    "B vs C",
     "53 vs 51",
     "14/12",
     "0.8450",
@@ -501,7 +501,7 @@
    ],
    [
     "Qwen3-235B",
-    "A vs BT",
+    "A vs B",
     "50 vs 49",
     "8/7",
     "1.0000",
@@ -517,7 +517,7 @@
    ],
    [
     "Qwen3-235B",
-    "BT vs C",
+    "B vs C",
     "49 vs 45",
     "11/7",
     "0.4807",
@@ -525,7 +525,7 @@
    ],
    [
     "Devstral-123B",
-    "A vs BT",
+    "A vs B",
     "13 vs 22",
     "5/14",
     "0.0636",
@@ -541,14 +541,14 @@
    ],
    [
     "Devstral-123B",
-    "BT vs C",
+    "B vs C",
     "22 vs 12",
     "13/3",
     "0.0213",
     "significant"
    ]
   ],
-  "footnote": "No A-vs-BT comparison is significant in any model; the smallest is p = .058 for GPT-5.6-terra.",
+  "footnote": "No A-vs-B comparison is significant in any model; the smallest is p = .058 for GPT-5.6-terra.",
   "tags": [
    "benchmark",
    "statistics",
@@ -586,7 +586,7 @@
    ],
    [
     "GPT-5.6-terra",
-    "BT: schema + text",
+    "B: schema + text",
     "23/30",
     "13/30",
     "18/30",
@@ -613,7 +613,7 @@
    ],
    [
     "Claude Sonnet 5",
-    "BT: schema + text",
+    "B: schema + text",
     "24/30",
     "19/30",
     "23/30",
@@ -640,7 +640,7 @@
    ],
    [
     "gpt-oss-120B",
-    "BT: schema + text",
+    "B: schema + text",
     "14/30",
     "10/30",
     "5/30",
@@ -667,7 +667,7 @@
    ],
    [
     "Qwen3-235B",
-    "BT: schema + text",
+    "B: schema + text",
     "7/30",
     "12/30",
     "4/30",
@@ -694,7 +694,7 @@
    ],
    [
     "Devstral-123B",
-    "BT: schema + text",
+    "B: schema + text",
     "2/30",
     "1/30",
     "1/30",
@@ -746,7 +746,7 @@
    ],
    [
     "GPT-5.6-terra",
-    "BT: schema + text",
+    "B: schema + text",
     "226/258",
     "84",
     "0.876",
@@ -770,7 +770,7 @@
    ],
    [
     "Claude Sonnet 5",
-    "BT: schema + text",
+    "B: schema + text",
     "217/258",
     "52",
     "0.841",
@@ -794,7 +794,7 @@
    ],
    [
     "gpt-oss-120B",
-    "BT: schema + text",
+    "B: schema + text",
     "89/258",
     "32",
     "0.345",
@@ -818,7 +818,7 @@
    ],
    [
     "Qwen3-235B",
-    "BT: schema + text",
+    "B: schema + text",
     "91/258",
     "82",
     "0.353",
@@ -842,7 +842,7 @@
    ],
    [
     "Devstral-123B",
-    "BT: schema + text",
+    "B: schema + text",
     "45/258",
     "338",
     "0.174",
@@ -892,7 +892,7 @@
    ],
    [
     "GPT-5.6-terra",
-    "BT: schema + text",
+    "B: schema + text",
     "5",
     "8",
     "14",
@@ -916,7 +916,7 @@
    ],
    [
     "Claude Sonnet 5",
-    "BT: schema + text",
+    "B: schema + text",
     "4",
     "11",
     "18",
@@ -940,7 +940,7 @@
    ],
    [
     "gpt-oss-120B",
-    "BT: schema + text",
+    "B: schema + text",
     "44",
     "23",
     "24",
@@ -964,7 +964,7 @@
    ],
    [
     "Qwen3-235B",
-    "BT: schema + text",
+    "B: schema + text",
     "46",
     "15",
     "31",
@@ -988,7 +988,7 @@
    ],
    [
     "Devstral-123B",
-    "BT: schema + text",
+    "B: schema + text",
     "50",
     "4",
     "55",
@@ -1111,7 +1111,7 @@
    ],
    [
     "claude-sonnet-5",
-    "BT",
+    "B",
     "91",
     "217",
     "47.73",
@@ -1138,7 +1138,7 @@
    ],
    [
     "devstral-123b",
-    "BT",
+    "B",
     "22",
     "45",
     "3.95",
@@ -1153,7 +1153,7 @@
   "featured": false,
   "id": "cost-percall",
   "kind": "grid",
-  "title": "Per-Call Economics, Condition BT",
+  "title": "Per-Call Economics, Condition B",
   "section_ref": "\u00a75.3",
   "category": "Cost",
   "source": "benchmark_v2 \u00b7 Bedrock call log",
@@ -1233,7 +1233,7 @@
   ],
   "rows": [
    [
-    "Reasoning on (cond. BT)",
+    "Reasoning on (cond. B)",
     "4,484",
     "$0.1326",
     "59.3s"
