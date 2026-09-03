@@ -1280,7 +1280,7 @@
    ]
   ]
  },
-  {
+ {
   "id": "bm-cost-vs-recall",
   "kind": "grid",
   "date": "2026-09-01",
@@ -1580,6 +1580,1376 @@
    "schema",
    "provenance",
    "traceability"
+  ]
+ },
+ {
+  "id": "gd-ptype",
+  "kind": "grid",
+  "date": "2026-09-03",
+  "featured": true,
+  "title": "Detection Rate by Perturbation Type",
+  "section_ref": "\u00a76.3",
+  "category": "Gap difficulty",
+  "source": "benchmark_v2 \u00b7 258 gaps \u00d7 15 runs",
+  "note": "Share of the 15 runs (5 models \u00d7 3 conditions) that found each gap, grouped by how the gap was injected. Overall rate 0.527. ADD added carve-out \u00b7 THR threshold qualifier \u00b7 REM removal \u00b7 ACT actor swap \u00b7 OMI omission \u00b7 SCP scope \u00b7 CON condition \u00b7 EXI existing-duty edit \u00b7 MOD modality \u00b7 NEG negation",
+  "columns": [
+   "Perturbation type",
+   "Gaps",
+   "Detection rate",
+   "vs. rest",
+   "z",
+   "p"
+  ],
+  "rows": [
+   [
+    "ADD",
+    "3",
+    "0.244",
+    "-0.282",
+    "-3.81",
+    "1.4e-04"
+   ],
+   [
+    "THR",
+    "39",
+    "0.285",
+    "-0.241",
+    "-12.68",
+    "7.7e-37"
+   ],
+   [
+    "REM",
+    "3",
+    "0.400",
+    "-0.127",
+    "-1.71",
+    "8.7e-02"
+   ],
+   [
+    "ACT",
+    "9",
+    "0.422",
+    "-0.104",
+    "-2.47",
+    "1.3e-02"
+   ],
+   [
+    "OMI",
+    "42",
+    "0.457",
+    "-0.069",
+    "-3.82",
+    "1.4e-04"
+   ],
+   [
+    "SCP",
+    "57",
+    "0.509",
+    "-0.018",
+    "-1.18",
+    "2.4e-01"
+   ],
+   [
+    "CON",
+    "6",
+    "0.567",
+    "+0.040",
+    "0.77",
+    "4.4e-01"
+   ],
+   [
+    "EXI",
+    "36",
+    "0.646",
+    "+0.120",
+    "6.00",
+    "1.9e-09"
+   ],
+   [
+    "MOD",
+    "54",
+    "0.668",
+    "+0.141",
+    "9.06",
+    "1.3e-19"
+   ],
+   [
+    "NEG",
+    "9",
+    "0.896",
+    "+0.370",
+    "8.76",
+    "2.0e-18"
+   ]
+  ],
+  "tags": [
+   "gap-difficulty",
+   "perturbation-type",
+   "detection"
+  ],
+  "footnote": "The 15 runs per gap are not independent \u2014 they read the same sentence \u2014 so the z-tests are over-confident. Use them to rank, not to infer."
+ },
+ {
+  "id": "gd-section",
+  "kind": "grid",
+  "date": "2026-09-03",
+  "featured": true,
+  "title": "Detection Rate by Reference Section",
+  "section_ref": "\u00a76.3",
+  "category": "Gap difficulty",
+  "source": "benchmark_v2 \u00b7 258 gaps \u00d7 15 runs",
+  "note": "Standardised holds every section to the corpus-wide perturbation mix, so topic and perturbation type are separated. The spread narrows only from 0.214 to 0.191, so about 89% of the topic effect is not explained by the mix.",
+  "columns": [
+   "Section",
+   "Gaps",
+   "Crude rate",
+   "Standardised",
+   "Difference"
+  ],
+  "rows": [
+   [
+    "Verification",
+    "33",
+    "0.398",
+    "0.417",
+    "+0.019"
+   ],
+   [
+    "Reporting",
+    "12",
+    "0.433",
+    "0.415",
+    "-0.018"
+   ],
+   [
+    "Business integrity",
+    "75",
+    "0.454",
+    "0.457",
+    "+0.002"
+   ],
+   [
+    "Environment",
+    "42",
+    "0.590",
+    "0.569",
+    "-0.022"
+   ],
+   [
+    "General compliance",
+    "15",
+    "0.609",
+    "0.539",
+    "-0.069"
+   ],
+   [
+    "Human rights",
+    "81",
+    "0.612",
+    "0.606",
+    "-0.005"
+   ]
+  ],
+  "tags": [
+   "gap-difficulty",
+   "topic",
+   "standardisation"
+  ]
+ },
+ {
+  "id": "gd-topic",
+  "kind": "grid",
+  "date": "2026-09-03",
+  "featured": false,
+  "title": "Detection Rate by Topic",
+  "section_ref": "\u00a76.3",
+  "category": "Gap difficulty",
+  "source": "benchmark_v2 \u00b7 258 gaps \u00d7 15 runs",
+  "note": "Topics are the reference Code of Conduct's own bullet labels. Where the document gives a bullet no label, its opening words are quoted instead. Anti-corruption and audit topics occupy every position at the hard end.",
+  "columns": [
+   "Topic",
+   "Section",
+   "Gaps",
+   "Detection rate"
+  ],
+  "rows": [
+   [
+    "Invitations and gifts",
+    "Business integrity",
+    "6",
+    "0.267"
+   ],
+   [
+    "Antitrust and competition law",
+    "Business integrity",
+    "12",
+    "0.311"
+   ],
+   [
+    "\u201cEfficient and responsible use of resources\u2026\u201d",
+    "Environment",
+    "6",
+    "0.322"
+   ],
+   [
+    "Prohibition of bribery",
+    "Business integrity",
+    "6",
+    "0.356"
+   ],
+   [
+    "\u201cAs part of our risk management\u2026\u201d",
+    "Verification",
+    "15",
+    "0.369"
+   ],
+   [
+    "Prohibition of corruption",
+    "Business integrity",
+    "6",
+    "0.378"
+   ],
+   [
+    "\u201cextent are appropriate, i.e., they are\u2026\u201d",
+    "Business integrity",
+    "6",
+    "0.389"
+   ],
+   [
+    "\u201cIn the event that there is\u2026\u201d",
+    "Verification",
+    "9",
+    "0.393"
+   ],
+   [
+    "\u201cPossible violations of the SCoC can\u2026\u201d",
+    "Reporting",
+    "6",
+    "0.411"
+   ],
+   [
+    "\u201cCompliance with all applicable laws, regulations\u2026\u201d",
+    "General compliance",
+    "6",
+    "0.422"
+   ],
+   [
+    "\u201cIf the supplier demonstrably fails to\u2026\u201d",
+    "Verification",
+    "9",
+    "0.452"
+   ],
+   [
+    "\u201cWhere required by law, thyssenkrupp expects\u2026\u201d",
+    "Reporting",
+    "6",
+    "0.456"
+   ],
+   [
+    "\u201cTransparency with regard to greenhouse gas\u2026\u201d",
+    "Environment",
+    "9",
+    "0.481"
+   ],
+   [
+    "\u201cNo violation of environmental obligations due\u2026\u201d",
+    "Environment",
+    "9",
+    "0.489"
+   ],
+   [
+    "Conflicts of interest",
+    "Business integrity",
+    "12",
+    "0.489"
+   ],
+   [
+    "\u201cCompliance with United Nations (UN) and\u2026\u201d",
+    "General compliance",
+    "3",
+    "0.511"
+   ],
+   [
+    "Foreign trade law",
+    "Business integrity",
+    "9",
+    "0.511"
+   ],
+   [
+    "Occupational health and safety",
+    "Human rights",
+    "18",
+    "0.522"
+   ],
+   [
+    "Expression of opinion, personal rights, and privacy",
+    "Human rights",
+    "3",
+    "0.533"
+   ],
+   [
+    "\u201cNot causing harmful soil contamination, water\u2026\u201d",
+    "Human rights",
+    "6",
+    "0.556"
+   ],
+   [
+    "Compensation and working hours",
+    "Human rights",
+    "9",
+    "0.563"
+   ],
+   [
+    "External personnel",
+    "Human rights",
+    "9",
+    "0.578"
+   ],
+   [
+    "\u201cPromotion of the reuse of raw\u2026\u201d",
+    "Environment",
+    "3",
+    "0.578"
+   ],
+   [
+    "Forced labor",
+    "Human rights",
+    "6",
+    "0.611"
+   ],
+   [
+    "Discrimination",
+    "Human rights",
+    "3",
+    "0.622"
+   ],
+   [
+    "Data protection/privacy and information security",
+    "Business integrity",
+    "12",
+    "0.633"
+   ],
+   [
+    "\u201cNo unlawful appropriation of land, forests\u2026\u201d",
+    "Human rights",
+    "6",
+    "0.644"
+   ],
+   [
+    "Money laundering and terrorist financing",
+    "Business integrity",
+    "6",
+    "0.656"
+   ],
+   [
+    "Right to organize",
+    "Human rights",
+    "3",
+    "0.689"
+   ],
+   [
+    "Child labor",
+    "Human rights",
+    "6",
+    "0.744"
+   ],
+   [
+    "Conflict minerals and high-risk raw materials",
+    "Human rights",
+    "12",
+    "0.750"
+   ],
+   [
+    "\u201cUse of technologies to prevent and\u2026\u201d",
+    "Environment",
+    "3",
+    "0.778"
+   ],
+   [
+    "\u201cEffective action in line with the\u2026\u201d",
+    "Environment",
+    "9",
+    "0.793"
+   ],
+   [
+    "\u201cCompliance with the Paris Climate Accords\u2026\u201d",
+    "General compliance",
+    "3",
+    "0.800"
+   ],
+   [
+    "\u201cCompliance with the principles of the\u2026\u201d",
+    "General compliance",
+    "3",
+    "0.889"
+   ],
+   [
+    "\u201cEstablishment and application of an appropriate\u2026\u201d",
+    "Environment",
+    "3",
+    "0.978"
+   ]
+  ],
+  "tags": [
+   "gap-difficulty",
+   "topic",
+   "detection"
+  ],
+  "footnote": "Rows backed by fewer than about 30 gold gaps move by whole gaps; read the ranking rather than the individual values."
+ },
+ {
+  "id": "gd-ptype-model",
+  "kind": "grid",
+  "date": "2026-09-03",
+  "featured": true,
+  "title": "Perturbation Type by Model",
+  "section_ref": "\u00a76.3",
+  "category": "Gap difficulty",
+  "source": "benchmark_v2 \u00b7 258 gaps \u00d7 15 runs",
+  "note": "Conditions pooled. Threshold edits are the one type that defeats the frontier models too: GPT-5.6-terra scores 0.90 or above on every other well-sampled row and 0.701 here. Qwen3-235B never detects an omission in 126 attempts.",
+  "columns": [
+   "Perturbation type",
+   "Gaps",
+   "GPT-5.6-terra",
+   "Claude Sonnet 5",
+   "gpt-oss-120B",
+   "Qwen3-235B",
+   "Devstral-123B"
+  ],
+  "rows": [
+   [
+    "ADD",
+    "3",
+    "0.000",
+    "0.000",
+    "0.000",
+    "0.778",
+    "0.444"
+   ],
+   [
+    "THR",
+    "39",
+    "0.701",
+    "0.504",
+    "0.085",
+    "0.043",
+    "0.094"
+   ],
+   [
+    "REM",
+    "3",
+    "1.000",
+    "0.889",
+    "0.000",
+    "0.111",
+    "0.000"
+   ],
+   [
+    "ACT",
+    "9",
+    "0.963",
+    "1.000",
+    "0.000",
+    "0.148",
+    "0.000"
+   ],
+   [
+    "OMI",
+    "42",
+    "0.905",
+    "0.841",
+    "0.405",
+    "0.000",
+    "0.135"
+   ],
+   [
+    "SCP",
+    "57",
+    "0.912",
+    "0.971",
+    "0.181",
+    "0.228",
+    "0.251"
+   ],
+   [
+    "CON",
+    "6",
+    "0.889",
+    "1.000",
+    "0.167",
+    "0.667",
+    "0.111"
+   ],
+   [
+    "EXI",
+    "36",
+    "0.981",
+    "0.981",
+    "0.602",
+    "0.361",
+    "0.306"
+   ],
+   [
+    "MOD",
+    "54",
+    "0.963",
+    "0.951",
+    "0.623",
+    "0.500",
+    "0.302"
+   ],
+   [
+    "NEG",
+    "9",
+    "1.000",
+    "1.000",
+    "1.000",
+    "0.963",
+    "0.519"
+   ]
+  ],
+  "tags": [
+   "gap-difficulty",
+   "perturbation-type",
+   "models"
+  ],
+  "footnote": "ADD, REM, ACT and CON have 3\u20139 gaps corpus-wide, so their per-model cells rest on 9\u201327 attempts. THR, OMI, SCP, MOD and EXI are the reliable rows."
+ },
+ {
+  "id": "gd-section-model",
+  "kind": "grid",
+  "date": "2026-09-03",
+  "featured": false,
+  "title": "Reference Section by Model",
+  "section_ref": "\u00a76.3",
+  "category": "Gap difficulty",
+  "source": "benchmark_v2 \u00b7 258 gaps \u00d7 15 runs",
+  "note": "Conditions pooled. The topic effect is far larger in the weak models (spread 0.45 for gpt-oss-120B) than the strong ones (0.18 for GPT-5.6-terra), but it does not vanish: Business integrity and Verification are the weakest sections for all five models.",
+  "columns": [
+   "Section",
+   "Gaps",
+   "GPT-5.6-terra",
+   "Claude Sonnet 5",
+   "gpt-oss-120B",
+   "Qwen3-235B",
+   "Devstral-123B"
+  ],
+  "rows": [
+   [
+    "Human rights",
+    "81",
+    "0.942",
+    "0.967",
+    "0.547",
+    "0.321",
+    "0.280"
+   ],
+   [
+    "Environment",
+    "42",
+    "0.817",
+    "0.778",
+    "0.571",
+    "0.437",
+    "0.349"
+   ],
+   [
+    "General compliance",
+    "15",
+    "1.000",
+    "0.911",
+    "0.333",
+    "0.400",
+    "0.400"
+   ],
+   [
+    "Business integrity",
+    "75",
+    "0.880",
+    "0.849",
+    "0.222",
+    "0.182",
+    "0.138"
+   ],
+   [
+    "Reporting",
+    "12",
+    "0.944",
+    "0.944",
+    "0.167",
+    "0.111",
+    "0.000"
+   ],
+   [
+    "Verification",
+    "33",
+    "0.838",
+    "0.727",
+    "0.121",
+    "0.182",
+    "0.121"
+   ]
+  ],
+  "tags": [
+   "gap-difficulty",
+   "topic",
+   "models"
+  ]
+ },
+ {
+  "id": "gd-ptype-condition",
+  "kind": "grid",
+  "date": "2026-09-03",
+  "featured": true,
+  "title": "Perturbation Type by Condition",
+  "section_ref": "\u00a76.3",
+  "category": "Gap difficulty",
+  "source": "benchmark_v2 \u00b7 258 gaps \u00d7 15 runs",
+  "note": "Models pooled. The schema does not rescue any gap type. Threshold edits, the hardest type, get worse under BT (0.313 to 0.246); the only positive moves are on types with three to six gaps.",
+  "columns": [
+   "Perturbation type",
+   "Gaps",
+   "A",
+   "BT",
+   "C",
+   "BT \u2212 A"
+  ],
+  "rows": [
+   [
+    "ADD",
+    "3",
+    "0.400",
+    "0.133",
+    "0.200",
+    "-0.267"
+   ],
+   [
+    "THR",
+    "39",
+    "0.313",
+    "0.246",
+    "0.297",
+    "-0.067"
+   ],
+   [
+    "REM",
+    "3",
+    "0.333",
+    "0.467",
+    "0.400",
+    "+0.133"
+   ],
+   [
+    "ACT",
+    "9",
+    "0.422",
+    "0.422",
+    "0.422",
+    "+0.000"
+   ],
+   [
+    "OMI",
+    "42",
+    "0.471",
+    "0.429",
+    "0.471",
+    "-0.043"
+   ],
+   [
+    "SCP",
+    "57",
+    "0.516",
+    "0.498",
+    "0.512",
+    "-0.018"
+   ],
+   [
+    "CON",
+    "6",
+    "0.600",
+    "0.633",
+    "0.467",
+    "+0.033"
+   ],
+   [
+    "EXI",
+    "36",
+    "0.633",
+    "0.656",
+    "0.650",
+    "+0.022"
+   ],
+   [
+    "MOD",
+    "54",
+    "0.689",
+    "0.674",
+    "0.641",
+    "-0.015"
+   ],
+   [
+    "NEG",
+    "9",
+    "0.911",
+    "0.911",
+    "0.867",
+    "+0.000"
+   ]
+  ],
+  "tags": [
+   "gap-difficulty",
+   "perturbation-type",
+   "conditions"
+  ]
+ },
+ {
+  "id": "gd-section-condition",
+  "kind": "grid",
+  "date": "2026-09-03",
+  "featured": false,
+  "title": "Reference Section by Condition",
+  "section_ref": "\u00a76.3",
+  "category": "Gap difficulty",
+  "source": "benchmark_v2 \u00b7 258 gaps \u00d7 15 runs",
+  "note": "Models pooled. Adding the schema is flat or slightly negative in every section. There is no topic where the schema recovers the aggregate null.",
+  "columns": [
+   "Section",
+   "Gaps",
+   "A",
+   "BT",
+   "C",
+   "BT \u2212 A"
+  ],
+  "rows": [
+   [
+    "Human rights",
+    "81",
+    "0.625",
+    "0.598",
+    "0.612",
+    "-0.027"
+   ],
+   [
+    "Environment",
+    "42",
+    "0.610",
+    "0.581",
+    "0.581",
+    "-0.029"
+   ],
+   [
+    "General compliance",
+    "15",
+    "0.613",
+    "0.613",
+    "0.600",
+    "+0.000"
+   ],
+   [
+    "Business integrity",
+    "75",
+    "0.469",
+    "0.437",
+    "0.456",
+    "-0.032"
+   ],
+   [
+    "Reporting",
+    "12",
+    "0.433",
+    "0.450",
+    "0.417",
+    "+0.017"
+   ],
+   [
+    "Verification",
+    "33",
+    "0.406",
+    "0.406",
+    "0.382",
+    "+0.000"
+   ]
+  ],
+  "tags": [
+   "gap-difficulty",
+   "topic",
+   "conditions"
+  ]
+ },
+ {
+  "id": "gd-topic-condition",
+  "kind": "grid",
+  "date": "2026-09-03",
+  "featured": true,
+  "title": "Topic by Condition",
+  "section_ref": "\u00a76.3",
+  "category": "Gap difficulty",
+  "source": "benchmark_v2 \u00b7 258 gaps \u00d7 15 runs",
+  "note": "Models pooled. Across the 36 topics the schema is better by more than 0.05 in four and worse in eleven. A paired sign test at the gap-by-model level, Holm-corrected over all 36 topics, finds no topic where BT differs from A: the smallest raw p is 0.180.",
+  "columns": [
+   "Topic",
+   "Section",
+   "Gaps",
+   "A",
+   "BT",
+   "C",
+   "BT \u2212 A"
+  ],
+  "rows": [
+   [
+    "Invitations and gifts",
+    "Business integrity",
+    "6",
+    "0.300",
+    "0.267",
+    "0.233",
+    "-0.033"
+   ],
+   [
+    "Antitrust and competition law",
+    "Business integrity",
+    "12",
+    "0.300",
+    "0.283",
+    "0.350",
+    "-0.017"
+   ],
+   [
+    "\u201cEfficient and responsible use of resources\u2026\u201d",
+    "Environment",
+    "6",
+    "0.367",
+    "0.233",
+    "0.367",
+    "-0.133"
+   ],
+   [
+    "Prohibition of bribery",
+    "Business integrity",
+    "6",
+    "0.367",
+    "0.267",
+    "0.433",
+    "-0.100"
+   ],
+   [
+    "\u201cAs part of our risk management\u2026\u201d",
+    "Verification",
+    "15",
+    "0.360",
+    "0.387",
+    "0.360",
+    "+0.027"
+   ],
+   [
+    "Prohibition of corruption",
+    "Business integrity",
+    "6",
+    "0.367",
+    "0.333",
+    "0.433",
+    "-0.033"
+   ],
+   [
+    "\u201cextent are appropriate, i.e., they are\u2026\u201d",
+    "Business integrity",
+    "6",
+    "0.400",
+    "0.367",
+    "0.400",
+    "-0.033"
+   ],
+   [
+    "\u201cIn the event that there is\u2026\u201d",
+    "Verification",
+    "9",
+    "0.422",
+    "0.356",
+    "0.400",
+    "-0.067"
+   ],
+   [
+    "\u201cPossible violations of the SCoC can\u2026\u201d",
+    "Reporting",
+    "6",
+    "0.400",
+    "0.433",
+    "0.400",
+    "+0.033"
+   ],
+   [
+    "\u201cCompliance with all applicable laws, regulations\u2026\u201d",
+    "General compliance",
+    "6",
+    "0.433",
+    "0.400",
+    "0.433",
+    "-0.033"
+   ],
+   [
+    "\u201cIf the supplier demonstrably fails to\u2026\u201d",
+    "Verification",
+    "9",
+    "0.467",
+    "0.489",
+    "0.400",
+    "+0.022"
+   ],
+   [
+    "\u201cWhere required by law, thyssenkrupp expects\u2026\u201d",
+    "Reporting",
+    "6",
+    "0.467",
+    "0.467",
+    "0.433",
+    "+0.000"
+   ],
+   [
+    "\u201cTransparency with regard to greenhouse gas\u2026\u201d",
+    "Environment",
+    "9",
+    "0.556",
+    "0.444",
+    "0.444",
+    "-0.111"
+   ],
+   [
+    "\u201cNo violation of environmental obligations due\u2026\u201d",
+    "Environment",
+    "9",
+    "0.467",
+    "0.533",
+    "0.467",
+    "+0.067"
+   ],
+   [
+    "Conflicts of interest",
+    "Business integrity",
+    "12",
+    "0.550",
+    "0.483",
+    "0.433",
+    "-0.067"
+   ],
+   [
+    "\u201cCompliance with United Nations (UN) and\u2026\u201d",
+    "General compliance",
+    "3",
+    "0.533",
+    "0.467",
+    "0.533",
+    "-0.067"
+   ],
+   [
+    "Foreign trade law",
+    "Business integrity",
+    "9",
+    "0.511",
+    "0.511",
+    "0.511",
+    "+0.000"
+   ],
+   [
+    "Occupational health and safety",
+    "Human rights",
+    "18",
+    "0.522",
+    "0.533",
+    "0.511",
+    "+0.011"
+   ],
+   [
+    "Expression of opinion, personal rights, and privacy",
+    "Human rights",
+    "3",
+    "0.533",
+    "0.533",
+    "0.533",
+    "+0.000"
+   ],
+   [
+    "\u201cNot causing harmful soil contamination, water\u2026\u201d",
+    "Human rights",
+    "6",
+    "0.600",
+    "0.467",
+    "0.600",
+    "-0.133"
+   ],
+   [
+    "Compensation and working hours",
+    "Human rights",
+    "9",
+    "0.578",
+    "0.578",
+    "0.533",
+    "+0.000"
+   ],
+   [
+    "External personnel",
+    "Human rights",
+    "9",
+    "0.600",
+    "0.556",
+    "0.578",
+    "-0.044"
+   ],
+   [
+    "\u201cPromotion of the reuse of raw\u2026\u201d",
+    "Environment",
+    "3",
+    "0.667",
+    "0.533",
+    "0.533",
+    "-0.133"
+   ],
+   [
+    "Forced labor",
+    "Human rights",
+    "6",
+    "0.667",
+    "0.567",
+    "0.600",
+    "-0.100"
+   ],
+   [
+    "Discrimination",
+    "Human rights",
+    "3",
+    "0.600",
+    "0.600",
+    "0.667",
+    "+0.000"
+   ],
+   [
+    "Data protection/privacy and information security",
+    "Business integrity",
+    "12",
+    "0.650",
+    "0.633",
+    "0.617",
+    "-0.017"
+   ],
+   [
+    "\u201cNo unlawful appropriation of land, forests\u2026\u201d",
+    "Human rights",
+    "6",
+    "0.633",
+    "0.633",
+    "0.667",
+    "+0.000"
+   ],
+   [
+    "Money laundering and terrorist financing",
+    "Business integrity",
+    "6",
+    "0.667",
+    "0.667",
+    "0.633",
+    "+0.000"
+   ],
+   [
+    "Right to organize",
+    "Human rights",
+    "3",
+    "0.733",
+    "0.533",
+    "0.800",
+    "-0.200"
+   ],
+   [
+    "Child labor",
+    "Human rights",
+    "6",
+    "0.700",
+    "0.800",
+    "0.733",
+    "+0.100"
+   ],
+   [
+    "Conflict minerals and high-risk raw materials",
+    "Human rights",
+    "12",
+    "0.783",
+    "0.733",
+    "0.733",
+    "-0.050"
+   ],
+   [
+    "\u201cUse of technologies to prevent and\u2026\u201d",
+    "Environment",
+    "3",
+    "0.733",
+    "0.867",
+    "0.733",
+    "+0.133"
+   ],
+   [
+    "\u201cEffective action in line with the\u2026\u201d",
+    "Environment",
+    "9",
+    "0.778",
+    "0.778",
+    "0.822",
+    "+0.000"
+   ],
+   [
+    "\u201cCompliance with the Paris Climate Accords\u2026\u201d",
+    "General compliance",
+    "3",
+    "0.733",
+    "0.867",
+    "0.800",
+    "+0.133"
+   ],
+   [
+    "\u201cCompliance with the principles of the\u2026\u201d",
+    "General compliance",
+    "3",
+    "0.933",
+    "0.933",
+    "0.800",
+    "+0.000"
+   ],
+   [
+    "\u201cEstablishment and application of an appropriate\u2026\u201d",
+    "Environment",
+    "3",
+    "1.000",
+    "1.000",
+    "0.933",
+    "+0.000"
+   ]
+  ],
+  "tags": [
+   "gap-difficulty",
+   "topic",
+   "conditions"
+  ],
+  "footnote": "Pooled over every topic, BT fixed 93 gaps and broke 121 (sign test p = 0.065). The visible per-topic swings are noise on three to six gaps."
+ },
+ {
+  "id": "gd-false-alarms",
+  "kind": "grid",
+  "date": "2026-09-03",
+  "featured": true,
+  "title": "Most Falsely Flagged Requirements",
+  "section_ref": "\u00a76.3",
+  "category": "Gap difficulty",
+  "source": "benchmark_v2 \u00b7 258 gaps \u00d7 15 runs",
+  "note": "2053 unsupported predictions fall on only 145 distinct reference requirements. 38 of the 40 most-flagged are requirements that are genuinely perturbed in other documents, so these are over-generalisation rather than invention. 61% are environmental or ESG bullet lists.",
+  "columns": [
+   "Times flagged",
+   "On zero-gap controls",
+   "Models",
+   "Real perturbation site elsewhere",
+   "Reference requirement"
+  ],
+  "rows": [
+   [
+    "301",
+    "9",
+    "5/5",
+    "yes",
+    "- Promotion of the reuse of raw materials;"
+   ],
+   [
+    "171",
+    "19",
+    "5/5",
+    "yes",
+    "Compliance with the principles of the United Nations Global Compact; the United Nations International Bill of Human Rights; the International Covenant"
+   ],
+   [
+    "144",
+    "19",
+    "5/5",
+    "yes",
+    "Compliance with the Paris Climate Accords, the Stockholm Convention on Persistent Organic Pollutants, the Basel Convention on the Control of Transboun"
+   ],
+   [
+    "115",
+    "18",
+    "4/5",
+    "yes",
+    "Compliance with United Nations (UN) and Organisation for Economic Co-operation and Development (OECD) anti-corruption conventions and relevant anti-br"
+   ],
+   [
+    "87",
+    "8",
+    "4/5",
+    "yes",
+    "Not causing harmful soil contamination, water pollution, air pollution, harmful noise emissions, or excessive water consumption, that is capable of (i"
+   ],
+   [
+    "61",
+    "10",
+    "3/5",
+    "yes",
+    "- No unlawful appropriation of land, forests, and waters, the use of which sustains an individual's livelihood."
+   ],
+   [
+    "59",
+    "8",
+    "4/5",
+    "yes",
+    "- Effective action in line with the Paris Climate Accords to reduce direct and indirect carbon emissions, including working on continuous improvements"
+   ],
+   [
+    "58",
+    "17",
+    "5/5",
+    "yes",
+    "Suppliers must only source conflict-free minerals, particularly tin, tantalum, tungsten, gold, their ores and metals alloyed with conflict raw materia"
+   ],
+   [
+    "56",
+    "8",
+    "3/5",
+    "yes",
+    "Transparency with regard to greenhouse gas emissions in the company's own and upstream activities;"
+   ],
+   [
+    "50",
+    "7",
+    "3/5",
+    "yes",
+    "Establishment and application of appropriate occupational health and safety management (e.g., in accordance with ISO 45001) to best prevent accidents "
+   ],
+   [
+    "49",
+    "3",
+    "1/5",
+    "yes",
+    "No violation of environmental obligations due to (i) the use of mercury and mercury compounds in products/manufacturing processes and through the trea"
+   ],
+   [
+    "47",
+    "8",
+    "3/5",
+    "yes",
+    "Establishment and application of an appropriate environmental and energy management system"
+   ],
+   [
+    "44",
+    "1",
+    "4/5",
+    "no",
+    "As part of our risk management activities, we regularly audit our suppliers to determine whether and what potential sustainability risks they may pose"
+   ],
+   [
+    "38",
+    "5",
+    "5/5",
+    "yes",
+    "Use of technologies to prevent and reduce waste, greenhouse gas emissions, wastewater pollution and pollutant emissions;"
+   ],
+   [
+    "33",
+    "2",
+    "2/5",
+    "yes",
+    "In the event that a product contains one or more of these conflict minerals or high-risk raw materials, such as cobalt, the supplier must be able to e"
+   ],
+   [
+    "30",
+    "2",
+    "5/5",
+    "yes",
+    "thyssenkrupp expects its suppliers and their subcontractors to implement appropriate measures to ensure compliance with the following principles and r"
+   ],
+   [
+    "29",
+    "3",
+    "2/5",
+    "yes",
+    "Where required by law, thyssenkrupp expects its suppliers to set up an appropriate whistleblowing system themselves."
+   ],
+   [
+    "27",
+    "0",
+    "5/5",
+    "yes",
+    "For this reason, thyssenkrupp emphasizes the use of suitable effective measures such as audits and self-assessment questionnaires to verify compliance"
+   ],
+   [
+    "25",
+    "5",
+    "2/5",
+    "yes",
+    "Prohibition of corruption: Rejection of any form of corruption, theft, embezzlement, fraud, or extortion. Zero tolerance for illegal payments or the g"
+   ],
+   [
+    "25",
+    "3",
+    "3/5",
+    "yes",
+    "Right to organize: Respect for the rights of employees to form employee representation bodies and to strike and bargain collectively;"
+   ]
+  ],
+  "tags": [
+   "gap-difficulty",
+   "false-positives",
+   "precision"
+  ],
+  "footnote": "The worst case is a nominalised bullet with no modality \u2014 \u201cPromotion of the reuse of raw materials;\u201d \u2014 rewritten with \u201cshould\u201d. All five models call it a modality gap on a document labelled gap-free. The annotation scheme has no rule for these, which is worth adjudicating."
+ },
+ {
+  "id": "gd-never-found",
+  "kind": "grid",
+  "date": "2026-09-03",
+  "featured": false,
+  "title": "Gaps No Model Found in Any Condition",
+  "section_ref": "\u00a76.3",
+  "category": "Gap difficulty",
+  "source": "benchmark_v2 \u00b7 258 gaps \u00d7 15 runs",
+  "note": "Four of the 258 gaps were missed by all five models in all three conditions. Every one is a threshold edit: a single qualifying adverb inserted into a categorical duty, which changes the legal force while leaving the sentence almost unchanged.",
+  "columns": [
+   "Perturbation type",
+   "Deontic type",
+   "Tier",
+   "Component",
+   "Span words",
+   "Document"
+  ],
+  "rows": [
+   [
+    "THR",
+    "PRO",
+    "Complexity_3",
+    "D-050",
+    "14",
+    "scocv2_17601bb7b4 #2"
+   ],
+   [
+    "THR",
+    "REC",
+    "Complexity_3",
+    "D-069",
+    "20",
+    "scocv2_d392ff5a85 #5"
+   ],
+   [
+    "THR",
+    "REC",
+    "Complexity_3",
+    "D-069",
+    "20",
+    "scocv2_d94e713a7a #5"
+   ],
+   [
+    "THR",
+    "OBL",
+    "Complexity_3",
+    "D-055",
+    "4",
+    "scocv2_e1d75b4747 #4"
+   ]
+  ],
+  "tags": [
+   "gap-difficulty",
+   "threshold",
+   "failures"
   ]
  }
 ]
