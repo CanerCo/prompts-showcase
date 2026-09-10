@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 510" role="img" aria-labelledby="t d" font-family="Arial, Helvetica, sans-serif">
+<title id="t">Component-level comparison for the Reporting Violations topic</title>
+<desc id="d">Three panels. (a) Topic level: a reference code and a candidate code both attach to the same taxonomy node, Reporting Violations, so a coverage comparison records the topic as present in both and sees nothing further. (b) Frame layer: the node carries a FrameNet frame, Reporting, whose core frame elements — Informer, Authorities and Behavior — state what a complete provision must specify. (c) Slot-level comparison: binding values to those three elements shows the candidate narrows the Informer from any employee or third party to permanent employees only, and omits the Authorities channel altogether, while Behavior matches. Two gaps are detected, each anchored to verbatim quotes, where topic-level alignment alone found none.</desc>
+<defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6.4" refY="3" orient="auto"><path d="M0,0 L6.5,3 L0,6 Z" fill="#5d6872"/></marker></defs>
+<rect width="960" height="510" fill="#ffffff"/>
+<rect x="10" y="10" width="940" height="490" rx="8" fill="none" stroke="#d8dde2" stroke-width="1.2"/>
+<text x="155" y="44" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13.5" fill="#1d252c" font-weight="bold">(a) Topic level</text>
+<text x="155" y="63" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#5d6872" font-style="italic">&#8220;Is the topic covered?&#8221;</text>
+<text x="470" y="44" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13.5" fill="#1d252c" font-weight="bold">(b) Frame layer</text>
+<text x="470" y="63" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#5d6872" font-style="italic">&#8220;What must a complete provision specify?&#8221;</text>
+<text x="812" y="44" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13.5" fill="#1d252c" font-weight="bold">(c) Slot-level comparison</text>
+<text x="812" y="63" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#5d6872" font-style="italic">&#8220;Which component is missing or weakened?&#8221;</text>
+<rect x="130" y="84" width="50" height="22" rx="3" fill="#f1f3f5" stroke="#d8dde2" stroke-width="1.2"/>
+<text x="155" y="99" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#1d252c">root</text>
+<line x1="155" y1="106" x2="155" y2="130" stroke="#d8dde2" stroke-width="1.3"/>
+<rect x="62" y="130" width="186" height="32" rx="4" fill="#ffffff" stroke="#2c7a6b" stroke-width="1.6"/>
+<text x="155" y="151" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#1d252c">Reporting Violations</text>
+<rect x="38" y="220" width="112" height="44" rx="4" fill="#ffffff" stroke="#d8dde2" stroke-width="1.2"/>
+<text x="94" y="239" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#1d252c">Reference code</text>
+<text x="94" y="254" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#5d6872">&#167; &#8220;Whistleblowing&#8221;</text>
+<rect x="158" y="220" width="112" height="44" rx="4" fill="#ffffff" stroke="#d8dde2" stroke-width="1.2"/>
+<text x="214" y="239" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#1d252c">Candidate code</text>
+<text x="214" y="254" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9.5" fill="#5d6872">&#167; &#8220;Speak Up&#8221;</text>
+<line x1="94" y1="218" x2="104" y2="166" stroke="#5d6872" stroke-width="1.3" marker-end="url(#ah)"/>
+<line x1="214" y1="218" x2="204" y2="166" stroke="#5d6872" stroke-width="1.3" marker-end="url(#ah)"/>
+<text x="155" y="197" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">ORIGIN</text>
+<text x="155" y="296" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">coverage comparison:</text>
+<text x="146" y="317" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1d252c" font-weight="bold">&#8220;present in both&#8221;</text>
+<text x="217" y="317" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#2c7a6b">&#10003;</text>
+<text x="155" y="337" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#5d6872">node is atomic &#8212;</text>
+<text x="155" y="352" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#5d6872">an omission inside it is invisible</text>
+<line x1="272" y1="232" x2="332" y2="232" stroke="#5d6872" stroke-width="1.3" marker-end="url(#ah)"/>
+<text x="302" y="222" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">frame</text>
+<text x="302" y="249" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">enrichment</text>
+<rect x="370" y="84" width="200" height="32" rx="4" fill="#ffffff" stroke="#2c7a6b" stroke-width="1.6"/>
+<text x="470" y="105" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#1d252c">Reporting Violations</text>
+<line x1="470" y1="116" x2="470" y2="154" stroke="#5d6872" stroke-width="1.3" marker-end="url(#ah)"/>
+<text x="482" y="131" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="10" fill="#1d252c">has_frame</text>
+<text x="482" y="145" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="9" fill="#5d6872">rationale + evidence</text>
+<rect x="350" y="154" width="240" height="58" rx="4" fill="#e3f0ec" stroke="#2c7a6b" stroke-width="1.6"/>
+<text x="462" y="178" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#1d252c">Reporting</text>
+<text x="468" y="178" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#5d6872">&#8212; FrameNet</text>
+<text x="470" y="196" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#5d6872" font-style="italic">informing authorities of wrongdoing</text>
+<line x1="470" y1="212" x2="374.0" y2="250" stroke="#5d6872" stroke-width="1.3" marker-end="url(#ah)"/>
+<line x1="470" y1="212" x2="477.0" y2="250" stroke="#5d6872" stroke-width="1.3" marker-end="url(#ah)"/>
+<line x1="470" y1="212" x2="578.0" y2="250" stroke="#5d6872" stroke-width="1.3" marker-end="url(#ah)"/>
+<rect x="330" y="250" width="88" height="26" rx="13" fill="#ffffff" stroke="#2c7a6b" stroke-width="1.4"/>
+<text x="374.0" y="267" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#1d252c">Informer</text>
+<rect x="428" y="250" width="98" height="26" rx="13" fill="#ffffff" stroke="#2c7a6b" stroke-width="1.4"/>
+<text x="477.0" y="267" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#1d252c">Authorities</text>
+<rect x="536" y="250" width="84" height="26" rx="13" fill="#ffffff" stroke="#2c7a6b" stroke-width="1.4"/>
+<text x="578.0" y="267" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#1d252c">Behavior</text>
+<text x="470" y="297" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">core frame elements</text>
+<text x="470" y="322" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">what the frame contributes:</text>
+<text x="470" y="343" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1d252c" font-weight="bold">the expert&#8217;s checklist,</text>
+<text x="470" y="361" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1d252c" font-weight="bold">drawn from an external inventory</text>
+<line x1="604" y1="243" x2="648" y2="243" stroke="#5d6872" stroke-width="1.3" marker-end="url(#ah)"/>
+<text x="624" y="199" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">formalize:</text>
+<text x="624" y="212" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">bind values</text>
+<text x="624" y="225" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">+ quotes</text>
+<text x="774.0" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#1d252c" font-weight="bold">Reference</text>
+<text x="882.0" y="90" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#1d252c" font-weight="bold">Candidate</text>
+<text x="718" y="134" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">Informer</text>
+<rect x="726" y="108" width="96" height="42" rx="4" fill="#ffffff" stroke="#d8dde2" stroke-width="1.2"/>
+<text x="774.0" y="128" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">any employee</text>
+<text x="774.0" y="142" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">or third party</text>
+<rect x="834" y="108" width="96" height="42" rx="4" fill="#fdf3e7" stroke="#c07a2e" stroke-width="1.6"/>
+<text x="882.0" y="128" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">permanent</text>
+<text x="882.0" y="142" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">employees only</text>
+<text x="928" y="103" text-anchor="end" font-family="'Courier New', Courier, monospace" font-size="8.5" fill="#c07a2e" font-weight="bold">SCP</text>
+<text x="718" y="188" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">Authorities</text>
+<rect x="726" y="162" width="96" height="42" rx="4" fill="#ffffff" stroke="#d8dde2" stroke-width="1.2"/>
+<text x="774.0" y="182" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">anonymous</text>
+<text x="774.0" y="196" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">ombudsman</text>
+<rect x="834" y="162" width="96" height="42" rx="4" fill="#fdfaf5" stroke="#c07a2e" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="882.0" y="188" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#5d6872" font-style="italic">omitted</text>
+<text x="928" y="157" text-anchor="end" font-family="'Courier New', Courier, monospace" font-size="8.5" fill="#c07a2e" font-weight="bold">OMI</text>
+<text x="718" y="242" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">Behavior</text>
+<rect x="726" y="216" width="96" height="42" rx="4" fill="#ffffff" stroke="#d8dde2" stroke-width="1.2"/>
+<text x="774.0" y="236" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">violations of</text>
+<text x="774.0" y="250" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">this Code</text>
+<rect x="834" y="216" width="96" height="42" rx="4" fill="#ffffff" stroke="#d8dde2" stroke-width="1.2"/>
+<text x="874.0" y="236" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">violations of</text>
+<text x="874.0" y="250" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#1d252c">this Code</text>
+<text x="915" y="243" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#2c7a6b">&#10003;</text>
+<text x="806" y="280" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9" fill="#5d6872">SCP = scope narrowed &#183; OMI = component omitted</text>
+<rect x="684" y="296" width="250" height="64" rx="5" fill="#fdfaf5" stroke="#c07a2e" stroke-width="1.3" stroke-dasharray="4,3"/>
+<text x="698" y="316" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="8.5" fill="#1d252c">gap record: evidence = verbatim quotes</text>
+<text x="698" y="332" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="8.5" fill="#1d252c">perturbation = OMI &#183; SCP</text>
+<text x="698" y="348" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="8.5" fill="#1d252c">deontic type = OBL + judged at eval (&#167;5.3)</text>
+<text x="828" y="384" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">slot-level comparison:</text>
+<text x="819" y="405" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1d252c" font-weight="bold">2 gaps detected,</text>
+<text x="886" y="405" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#c07a2e">&#10007;</text>
+<text x="828" y="425" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#5d6872">each anchored to citable evidence</text>
+<line x1="48" y1="458" x2="912" y2="458" stroke="#d8dde2" stroke-width="1"/>
+<text x="155" y="485" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">topic presence</text>
+<line x1="252" y1="481" x2="342" y2="481" stroke="#5d6872" stroke-width="1.3" marker-end="url(#ah)"/>
+<text x="470" y="485" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">required components</text>
+<line x1="586" y1="481" x2="676" y2="481" stroke="#5d6872" stroke-width="1.3" marker-end="url(#ah)"/>
+<text x="828" y="485" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="9.5" fill="#5d6872">checkable slots</text>
+</svg>
