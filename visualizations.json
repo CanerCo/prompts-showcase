@@ -61,28 +61,25 @@
   ]
  },
  {
-  "id": "fig-schema-explorer",
-  "kind": "interactive",
+  "id": "fig-taxonomy-schema",
+  "kind": "figure",
   "date": "2026-09-10",
   "featured": true,
-  "title": "Induced Schema Explorer",
+  "title": "Taxonomy and Schema, by Example",
   "section_ref": "\u00a74.4",
   "category": "Figures",
   "source": "tk-SCoC-4.1-en \u00b7 induced schema graph",
-  "note": "The schema induced from the reference Code of Conduct, browsable as the pipeline emitted it: 107 concepts in a taxonomy of maximum depth 8, the FrameNet frames each one carries, and \u2014 where the document fills a slot \u2014 the bound value with the verbatim quote behind it. Filter by concept or frame name; select any node to see its frames, bindings and source passage.",
-  "page": "schema-explorer.html",
-  "action": "Open the explorer",
-  "alt": "Two-pane explorer. The left pane lists the 107 induced concepts as an indented, filterable taxonomy tree. The right pane shows the selected concept's FrameNet frames with their core elements, the frame-element bindings with bound values and verbatim source quotes, and the source passage the concept was derived from.",
-  "caption": "Example taxonomy and schema for the reference Code of Conduct (\u00a74.4). The tree is the induced taxonomy; selecting a concept shows the frame layer beneath it. Only 35 of the 107 concepts carry a binding \u2014 the remaining 72 have a frame checklist the document never answers, which is the asymmetry component-level comparison exploits.",
+  "note": "What the two layers look like, taken from the schema induced over the reference Code of Conduct. Concepts form one rooted tree; each concept carries FrameNet frames whose core elements are the slots a complete provision would fill.",
+  "image": "figures/taxonomy-schema-example.svg",
+  "alt": "Two panels. (a) The topic taxonomy: one path seven levels deep from the root, Ethical Principles and Training, down to Reporting of Ethical Violations, with the number of sibling concepts collapsed at each level; the full taxonomy holds 107 concepts and reaches depth 8. (b) The schema on that concept: it carries the FrameNet frame Reporting, whose four core elements are Informer, Wrongdoer, Authorities and Behavior. Three are bound to values from the document, each backed by a verbatim quote; Wrongdoer is left unfilled.",
+  "caption": "Example taxonomy and schema (\u00a74.4). The tree on the left is the induced taxonomy, one path of it; the stack on the right is what hangs off a single concept. Three of the four core slots are filled and Wrongdoer is not \u2014 an omission visible only because the frame named the slot in advance.",
   "tags": [
    "taxonomy",
    "framenet",
    "frames",
    "schema",
-   "provenance",
-   "interactive"
-  ],
-  "embed": "schema-explorer.html?embed=1"
+   "provenance"
+  ]
  },
  {
   "id": "summary-example-1",
