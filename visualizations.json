@@ -40,6 +40,27 @@
   ]
  },
  {
+  "id": "fig-frame-slot-comparison",
+  "kind": "figure",
+  "date": "2026-09-10",
+  "featured": true,
+  "title": "Component-Level Comparison at the Frame Layer",
+  "section_ref": "\u00a74.6",
+  "category": "Figures",
+  "source": "Reporting Violations topic \u00b7 induced schema",
+  "note": "Why the schema carries a frame layer at all. Read left to right: topic-level alignment can only ask whether both documents cover Reporting Violations, and both do, so the node is atomic and an omission inside it is invisible. The FrameNet frame attached to that node supplies the checklist \u2014 Informer, Authorities, Behavior \u2014 from an external inventory rather than from the model's own reading, and binding values to those elements turns the comparison into three checkable slots.",
+  "image": "figures/frame-slot-comparison.svg",
+  "alt": "Three panels. (a) A reference code and a candidate code both attach to the same taxonomy node, Reporting Violations, so a coverage comparison records the topic as present in both. (b) The node carries the FrameNet frame Reporting, whose core frame elements Informer, Authorities and Behavior state what a complete provision must specify. (c) Binding values to those elements shows the candidate narrows Informer from any employee or third party to permanent employees only, and omits the Authorities channel, while Behavior matches \u2014 two gaps where topic alignment found none.",
+  "caption": "Example of component-level comparison for the Reporting Violations topic (\u00a74.6): frame-element binding reveals a narrowed reporter scope and an omitted reporting channel that topic-level alignment alone would miss.",
+  "tags": [
+   "frames",
+   "framenet",
+   "taxonomy",
+   "gap-detection",
+   "provenance"
+  ]
+ },
+ {
   "id": "summary-example-1",
   "kind": "fields",
   "title": "Example Section Summary",
