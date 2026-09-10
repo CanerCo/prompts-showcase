@@ -1,5 +1,45 @@
 [
  {
+  "id": "fig-topic-perturbation",
+  "kind": "figure",
+  "date": "2026-09-03",
+  "featured": true,
+  "title": "Gap Detection by Section and Perturbation Type",
+  "section_ref": "\u00a76.3",
+  "category": "Figures",
+  "source": "benchmark_v2 \u00b7 258 gaps \u00d7 12 runs",
+  "note": "Share of the 12 runs (4 models \u00d7 3 conditions) that found each gap, split by the section of the reference Code of Conduct it belongs to and by how it was injected. Columns run hardest to easiest. Cells backed by fewer than three gold gaps are left uncoloured rather than shown as noise.",
+  "image": "figures/topic-perturbation-heatmap.svg",
+  "alt": "Six by ten matrix of detection rates. Rows are reference sections, columns are perturbation types ordered hardest to easiest. Darker means more often detected.",
+  "caption": "Read down a column to separate topic from perturbation type: for modality edits the rate falls from 0.81 in Human rights to 0.56 in Verification, and the same ordering holds for scope and omission. Reweighting every section to the corpus-wide perturbation mix narrows the spread only from 0.227 to 0.203.",
+  "tags": [
+   "gap-difficulty",
+   "topic",
+   "perturbation-type",
+   "heatmap"
+  ]
+ },
+ {
+  "id": "fig-cost-vs-recall",
+  "kind": "figure",
+  "date": "2026-09-01",
+  "featured": true,
+  "title": "Cost of Conditions A + BT against Pooled Gap Recall",
+  "section_ref": "\u00a76.2",
+  "category": "Figures",
+  "source": "benchmark_v2 \u00b7 300 calls per model",
+  "note": "Pooled across conditions A (raw text) and BT (raw text + induced schema), 150 documents each. Cost is billed spend for those 300 calls.",
+  "image": "figures/cost-vs-recall.svg",
+  "alt": "Scatter plot of four language models, cost in dollars on the vertical axis against pooled gap recall on the horizontal axis, connected in order of increasing recall.",
+  "caption": "Models ordered left to right by recall. The two open models cluster cheaply at low recall; Claude Sonnet 5 climbs to $37.21, and GPT-5.6-terra then reaches higher recall for $9.63.",
+  "tags": [
+   "benchmark",
+   "cost",
+   "gap-recall",
+   "scatter"
+  ]
+ },
+ {
   "id": "summary-example-1",
   "kind": "fields",
   "title": "Example Section Summary",
@@ -214,26 +254,6 @@
     "indent": 0,
     "text": "end function"
    }
-  ]
- },
- {
-  "id": "fig-cost-vs-recall",
-  "kind": "figure",
-  "date": "2026-09-01",
-  "featured": true,
-  "title": "Cost of Conditions A + BT against Pooled Gap Recall",
-  "section_ref": "\u00a76.2",
-  "category": "Figures",
-  "source": "benchmark_v2 \u00b7 300 calls per model",
-  "note": "Pooled across conditions A (raw text) and BT (raw text + induced schema), 150 documents each. Cost is billed spend for those 300 calls.",
-  "image": "figures/cost-vs-recall.svg",
-  "alt": "Scatter plot of five language models, cost in dollars on the vertical axis against pooled gap recall on the horizontal axis, connected in order of increasing recall.",
-  "caption": "Models ordered left to right by recall. The three open models cluster cheaply at low recall; Claude Sonnet 5 climbs to $37.21, and GPT-5.6-terra then reaches higher recall for $9.63.",
-  "tags": [
-   "benchmark",
-   "cost",
-   "gap-recall",
-   "scatter"
   ]
  }
 ]
