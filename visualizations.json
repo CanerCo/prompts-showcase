@@ -61,6 +61,30 @@
   ]
  },
  {
+  "id": "fig-schema-explorer",
+  "kind": "interactive",
+  "date": "2026-09-10",
+  "featured": true,
+  "title": "Induced Schema Explorer",
+  "section_ref": "\u00a74.4",
+  "category": "Figures",
+  "source": "tk-SCoC-4.1-en \u00b7 induced schema graph",
+  "note": "The schema induced from the reference Code of Conduct, browsable as the pipeline emitted it: 107 concepts in a taxonomy of maximum depth 8, the FrameNet frames each one carries, and \u2014 where the document fills a slot \u2014 the bound value with the verbatim quote behind it. Filter by concept or frame name; select any node to see its frames, bindings and source passage.",
+  "page": "schema-explorer.html",
+  "action": "Open the explorer",
+  "alt": "Two-pane explorer. The left pane lists the 107 induced concepts as an indented, filterable taxonomy tree. The right pane shows the selected concept's FrameNet frames with their core elements, the frame-element bindings with bound values and verbatim source quotes, and the source passage the concept was derived from.",
+  "caption": "Example taxonomy and schema for the reference Code of Conduct (\u00a74.4). The tree is the induced taxonomy; selecting a concept shows the frame layer beneath it. Only 35 of the 107 concepts carry a binding \u2014 the remaining 72 have a frame checklist the document never answers, which is the asymmetry component-level comparison exploits.",
+  "tags": [
+   "taxonomy",
+   "framenet",
+   "frames",
+   "schema",
+   "provenance",
+   "interactive"
+  ],
+  "embed": "schema-explorer.html?embed=1"
+ },
+ {
   "id": "summary-example-1",
   "kind": "fields",
   "title": "Example Section Summary",
