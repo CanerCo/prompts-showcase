@@ -68,9 +68,7 @@ function getVisibleVisualizations() {
     const gridText = item.kind === "grid"
       ? [item.columns || [], ...(item.rows || [])].flat().join(" ")
       : "";
-    const figureText = item.kind === "figure" || item.kind === "interactive"
-      ? (item.caption || "")
-      : "";
+    const figureText = item.kind === "figure" ? (item.caption || "") : "";
     const algoText = item.kind === "algorithm"
       ? (item.lines || []).map(l => l.text || "").join(" ")
       : "";
@@ -137,8 +135,6 @@ function createVisualizationCard(item) {
     body.append(buildGrid(item));
   } else if (item.kind === "figure") {
     body.append(buildFigure(item));
-  } else if (item.kind === "interactive") {
-    body.append(buildInteractive(item));
   } else if (item.kind === "algorithm") {
     body.append(buildAlgorithm(item));
   } else {
@@ -230,36 +226,6 @@ function buildFigure(item) {
   img.alt = item.alt || item.title || "";
   img.loading = "lazy";
   wrapper.append(img);
-
-  if (item.caption) {
-    const caption = document.createElement("figcaption");
-    caption.className = "figure-caption";
-    caption.textContent = item.caption;
-    wrapper.append(caption);
-  }
-
-  return wrapper;
-}
-
-function buildInteractive(item) {
-  const wrapper = document.createElement("figure");
-  wrapper.className = "figure-wrapper interactive-wrapper";
-
-  const frame = document.createElement("iframe");
-  frame.className = "interactive-frame";
-  frame.src = item.embed || item.page;
-  frame.title = item.alt || item.title || "Interactive figure";
-  frame.loading = "lazy";
-  wrapper.append(frame);
-
-  const actions = document.createElement("p");
-  actions.className = "interactive-actions";
-  const open = document.createElement("a");
-  open.className = "button secondary";
-  open.href = item.page;
-  open.textContent = item.action || "Open the full page";
-  actions.append(open);
-  wrapper.append(actions);
 
   if (item.caption) {
     const caption = document.createElement("figcaption");
