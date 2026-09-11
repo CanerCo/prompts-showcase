@@ -1992,14 +1992,14 @@
   "section_ref": "\u00a76.3",
   "category": "Gap difficulty",
   "source": "benchmark_v2 \u00b7 258 gaps \u00d7 12 runs",
-  "note": "Models pooled. The schema does not rescue any gap type. Threshold edits, the hardest type, get worse under BT (0.365 to 0.301); the largest positive move, +0.167, is on a type with three gaps corpus-wide, and no well-sampled type gains more than 0.035.",
+  "note": "Models pooled. The schema does not rescue any gap type. Threshold edits, the hardest type, get worse under B (0.365 to 0.301); the largest positive move, +0.167, is on a type with three gaps corpus-wide, and no well-sampled type gains more than 0.035.",
   "columns": [
    "Perturbation type",
    "Gaps",
    "A",
-   "BT",
+   "B",
    "C",
-   "BT \u2212 A"
+   "B \u2212 A"
   ],
   "rows": [
    [
@@ -2103,9 +2103,9 @@
    "Section",
    "Gaps",
    "A",
-   "BT",
+   "B",
    "C",
-   "BT \u2212 A"
+   "B \u2212 A"
   ],
   "rows": [
    [
@@ -2172,15 +2172,15 @@
   "section_ref": "\u00a76.3",
   "category": "Gap difficulty",
   "source": "benchmark_v2 \u00b7 258 gaps \u00d7 12 runs",
-  "note": "Models pooled. Across the 36 topics the schema is better by more than 0.05 in six and worse in ten. A paired sign test at the gap-by-model level, Holm-corrected over all 36 topics, finds no topic where BT differs from A: the smallest raw p is 0.219.",
+  "note": "Models pooled. Across the 36 topics the schema is better by more than 0.05 in six and worse in ten. A paired sign test at the gap-by-model level, Holm-corrected over all 36 topics, finds no topic where B differs from A: the smallest raw p is 0.219.",
   "columns": [
    "Topic",
    "Section",
    "Gaps",
    "A",
-   "BT",
+   "B",
    "C",
-   "BT \u2212 A"
+   "B \u2212 A"
   ],
   "rows": [
    [
@@ -2513,7 +2513,7 @@
    "topic",
    "conditions"
   ],
-  "footnote": "Pooled over every topic, BT fixed 70 gaps and broke 80 (sign test p = 0.463). The visible per-topic swings are noise on three to six gaps."
+  "footnote": "Pooled over every topic, B fixed 70 gaps and broke 80 (sign test p = 0.463). The visible per-topic swings are noise on three to six gaps."
  },
  {
   "id": "gd-false-alarms",
